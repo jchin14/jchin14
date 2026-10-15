@@ -19,7 +19,7 @@ now = datetime.now(timezone.utc)
 
 # Aggregate stats including private repos/commits (needs a PAT in PROFILE_TOKEN; only counts are published).
 Q = """{viewer{followers{totalCount} following{totalCount}
- repositories(ownerAffiliations:OWNER,first:100){totalCount nodes{isPrivate isFork stargazerCount primaryLanguage{name}}}
+ repositories(ownerAffiliations:[OWNER,COLLABORATOR,ORGANIZATION_MEMBER],first:100){totalCount nodes{nameWithOwner isPrivate isFork stargazerCount primaryLanguage{name} owner{login}}}
  contributionsCollection{totalCommitContributions restrictedContributionsCount
   contributionCalendar{totalContributions weeks{contributionDays{date contributionCount}}}}}}"""
 priv = None
@@ -35,15 +35,16 @@ years = (now - datetime.fromisoformat(user["created_at"].replace("Z", "+00:00"))
 tiles = [("Repos", user["public_repos"]), ("Stars", stars), ("Followers", user["followers"]),
          ("Following", user["following"]), ("Forks", forks), ("Years", f"{years:.1f}")]
 if priv:
-    nodes = priv["repositories"]["nodes"]
+    nodes = {n["nameWithOwner"]: n for n in priv["repositories"]["nodes"]}.values()
+    mine = [n for n in nodes if n["owner"]["login"].lower() == USER.lower()]
     cc = priv["contributionsCollection"]
-    tiles = [("Repos", priv["repositories"]["totalCount"]), ("Private", sum(n["isPrivate"] for n in nodes)),
-             ("Stars", sum(n["stargazerCount"] for n in nodes)), ("Followers", priv["followers"]["totalCount"]),
-             ("Commits 1y", cc["totalCommitContributions"] + cc["restrictedContributionsCount"]),
-             ("Years", f"{years:.1f}")]
+    tiles = [("Repos", len(mine)), ("Private", sum(n["isPrivate"] for n in mine)),
+             ("Shared repos", len(nodes) - len(mine)), ("Stars", sum(n["stargazerCount"] for n in nodes)),
+             ("Followers", priv["followers"]["totalCount"]),
+             ("Commits 1y", cc["totalCommitContributions"] + cc["restrictedContributionsCount"])]
 
 langs = {}
-for r in (priv["repositories"]["nodes"] if priv else repos):
+for r in (nodes if priv else repos):
     name = (r["primaryLanguage"] or {}).get("name") if priv else r["language"]
     if name:
         langs[name] = langs.get(name, 0) + 1
@@ -68,6 +69,7 @@ o = ['<svg xmlns="http://www.w3.org/2000/svg" width="860" height="500" viewBox="
      '<defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>',
      '<rect width="860" height="500" rx="18" fill="#0b0f17"/>',
      f'<text x="30" y="46" fill="#e6edf3" font-size="26" font-weight="700">{escape(user.get("name") or USER)} · @{USER}</text>',
+     f'<text x="830" y="46" fill="#8b98a9" font-size="13" text-anchor="end">{years:.1f} years on GitHub</text>',
      '<rect x="30" y="58" width="120" height="3" rx="1.5" fill="url(#g)"/>']
 for i, (k, v) in enumerate(tiles):
     x = 30 + i * 133

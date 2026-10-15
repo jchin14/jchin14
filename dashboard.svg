@@ -2,19 +2,20 @@
 <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>
 <rect width="860" height="500" rx="18" fill="#0b0f17"/>
 <text x="30" y="46" fill="#e6edf3" font-size="26" font-weight="700">Jono · @jchin14</text>
+<text x="830" y="46" fill="#8b98a9" font-size="13" text-anchor="end">7.2 years on GitHub</text>
 <rect x="30" y="58" width="120" height="3" rx="1.5" fill="url(#g)"/>
 <rect x="30" y="80" width="121" height="70" rx="12" fill="#121826" stroke="#1f2937"/><text x="44" y="118" fill="url(#g)" font-size="28" font-weight="700">32</text><text x="44" y="138" fill="#8b98a9" font-size="11" letter-spacing="1">REPOS</text>
 <rect x="163" y="80" width="121" height="70" rx="12" fill="#121826" stroke="#1f2937"/><text x="177" y="118" fill="url(#g)" font-size="28" font-weight="700">23</text><text x="177" y="138" fill="#8b98a9" font-size="11" letter-spacing="1">PRIVATE</text>
-<rect x="296" y="80" width="121" height="70" rx="12" fill="#121826" stroke="#1f2937"/><text x="310" y="118" fill="url(#g)" font-size="28" font-weight="700">5</text><text x="310" y="138" fill="#8b98a9" font-size="11" letter-spacing="1">STARS</text>
-<rect x="429" y="80" width="121" height="70" rx="12" fill="#121826" stroke="#1f2937"/><text x="443" y="118" fill="url(#g)" font-size="28" font-weight="700">9</text><text x="443" y="138" fill="#8b98a9" font-size="11" letter-spacing="1">FOLLOWERS</text>
-<rect x="562" y="80" width="121" height="70" rx="12" fill="#121826" stroke="#1f2937"/><text x="576" y="118" fill="url(#g)" font-size="28" font-weight="700">347</text><text x="576" y="138" fill="#8b98a9" font-size="11" letter-spacing="1">COMMITS 1Y</text>
-<rect x="695" y="80" width="121" height="70" rx="12" fill="#121826" stroke="#1f2937"/><text x="709" y="118" fill="url(#g)" font-size="28" font-weight="700">7.2</text><text x="709" y="138" fill="#8b98a9" font-size="11" letter-spacing="1">YEARS</text>
+<rect x="296" y="80" width="121" height="70" rx="12" fill="#121826" stroke="#1f2937"/><text x="310" y="118" fill="url(#g)" font-size="28" font-weight="700">42</text><text x="310" y="138" fill="#8b98a9" font-size="11" letter-spacing="1">SHARED REPOS</text>
+<rect x="429" y="80" width="121" height="70" rx="12" fill="#121826" stroke="#1f2937"/><text x="443" y="118" fill="url(#g)" font-size="28" font-weight="700">36</text><text x="443" y="138" fill="#8b98a9" font-size="11" letter-spacing="1">STARS</text>
+<rect x="562" y="80" width="121" height="70" rx="12" fill="#121826" stroke="#1f2937"/><text x="576" y="118" fill="url(#g)" font-size="28" font-weight="700">9</text><text x="576" y="138" fill="#8b98a9" font-size="11" letter-spacing="1">FOLLOWERS</text>
+<rect x="695" y="80" width="121" height="70" rx="12" fill="#121826" stroke="#1f2937"/><text x="709" y="118" fill="url(#g)" font-size="28" font-weight="700">362</text><text x="709" y="138" fill="#8b98a9" font-size="11" letter-spacing="1">COMMITS 1Y</text>
 <text x="30" y="188" fill="#8b98a9" font-size="12" letter-spacing="1">LANGUAGES</text>
-<text x="30" y="214" fill="#e6edf3" font-size="13">Python</text><rect x="110" y="204" width="260" height="10" rx="5" fill="#1a2233"/><rect x="110" y="204" width="80" height="10" rx="5" fill="url(#g)"/><text x="380" y="214" fill="#8b98a9" font-size="12">8</text>
-<text x="30" y="242" fill="#e6edf3" font-size="13">C</text><rect x="110" y="232" width="260" height="10" rx="5" fill="#1a2233"/><rect x="110" y="232" width="70" height="10" rx="5" fill="url(#g)"/><text x="380" y="242" fill="#8b98a9" font-size="12">7</text>
-<text x="30" y="270" fill="#e6edf3" font-size="13">TypeScript</text><rect x="110" y="260" width="260" height="10" rx="5" fill="#1a2233"/><rect x="110" y="260" width="60" height="10" rx="5" fill="url(#g)"/><text x="380" y="270" fill="#8b98a9" font-size="12">6</text>
-<text x="30" y="298" fill="#e6edf3" font-size="13">HTML</text><rect x="110" y="288" width="260" height="10" rx="5" fill="#1a2233"/><rect x="110" y="288" width="40" height="10" rx="5" fill="url(#g)"/><text x="380" y="298" fill="#8b98a9" font-size="12">4</text>
-<text x="30" y="326" fill="#e6edf3" font-size="13">Assembly</text><rect x="110" y="316" width="260" height="10" rx="5" fill="#1a2233"/><rect x="110" y="316" width="10" height="10" rx="5" fill="url(#g)"/><text x="380" y="326" fill="#8b98a9" font-size="12">1</text>
+<text x="30" y="214" fill="#e6edf3" font-size="13">C++</text><rect x="110" y="204" width="260" height="10" rx="5" fill="#1a2233"/><rect x="110" y="204" width="85" height="10" rx="5" fill="url(#g)"/><text x="380" y="214" fill="#8b98a9" font-size="12">17</text>
+<text x="30" y="242" fill="#e6edf3" font-size="13">Python</text><rect x="110" y="232" width="260" height="10" rx="5" fill="#1a2233"/><rect x="110" y="232" width="80" height="10" rx="5" fill="url(#g)"/><text x="380" y="242" fill="#8b98a9" font-size="12">16</text>
+<text x="30" y="270" fill="#e6edf3" font-size="13">C</text><rect x="110" y="260" width="260" height="10" rx="5" fill="#1a2233"/><rect x="110" y="260" width="45" height="10" rx="5" fill="url(#g)"/><text x="380" y="270" fill="#8b98a9" font-size="12">9</text>
+<text x="30" y="298" fill="#e6edf3" font-size="13">TypeScript</text><rect x="110" y="288" width="260" height="10" rx="5" fill="#1a2233"/><rect x="110" y="288" width="30" height="10" rx="5" fill="url(#g)"/><text x="380" y="298" fill="#8b98a9" font-size="12">6</text>
+<text x="30" y="326" fill="#e6edf3" font-size="13">Java</text><rect x="110" y="316" width="260" height="10" rx="5" fill="#1a2233"/><rect x="110" y="316" width="20" height="10" rx="5" fill="url(#g)"/><text x="380" y="326" fill="#8b98a9" font-size="12">4</text>
 <text x="450" y="188" fill="#8b98a9" font-size="12" letter-spacing="1">ACTIVITY · 12 WEEKS</text>
 <rect x="450" y="202" width="25" height="16" rx="3" fill="#1a2233"/>
 <rect x="450" y="222" width="25" height="16" rx="3" fill="#1a2233"/>
@@ -101,13 +102,13 @@
 <rect x="769" y="302" width="25" height="16" rx="3" fill="#1a2233"/>
 <rect x="769" y="322" width="25" height="16" rx="3" fill="rgba(52,211,153,0.88)"/>
 <text x="30" y="372" fill="#8b98a9" font-size="12" letter-spacing="1">RECENTLY PUSHED</text>
-<text x="30" y="396" fill="#e6edf3" font-size="14" font-weight="600">netBae</text><text x="330" y="396" fill="#8b98a9" font-size="12">★ 1 · Python · 2m ago</text>
-<text x="30" y="418" fill="#e6edf3" font-size="14" font-weight="600">jchin14</text><text x="330" y="418" fill="#8b98a9" font-size="12">★ 0 · Python · 6m ago</text>
-<text x="30" y="440" fill="#e6edf3" font-size="14" font-weight="600">quest-adb-driver-arm64</text><text x="330" y="440" fill="#8b98a9" font-size="12">★ 0 · 24m ago</text>
+<text x="30" y="396" fill="#e6edf3" font-size="14" font-weight="600">jchin14</text><text x="330" y="396" fill="#8b98a9" font-size="12">★ 0 · Python · 4m ago</text>
+<text x="30" y="418" fill="#e6edf3" font-size="14" font-weight="600">netBae</text><text x="330" y="418" fill="#8b98a9" font-size="12">★ 1 · Python · 7m ago</text>
+<text x="30" y="440" fill="#e6edf3" font-size="14" font-weight="600">quest-adb-driver-arm64</text><text x="330" y="440" fill="#8b98a9" font-size="12">★ 0 · 29m ago</text>
 <text x="30" y="462" fill="#e6edf3" font-size="14" font-weight="600">klipper-backup</text><text x="330" y="462" fill="#8b98a9" font-size="12">★ 1 · 3d ago</text>
 <text x="560" y="372" fill="#8b98a9" font-size="12" letter-spacing="1">RECENT EVENTS</text>
-<text x="560" y="396" fill="#e6edf3" font-size="13">Release · netBae</text><text x="810" y="396" fill="#8b98a9" font-size="12" text-anchor="end">2m</text>
-<text x="560" y="418" fill="#e6edf3" font-size="13">Release · netBae</text><text x="810" y="418" fill="#8b98a9" font-size="12" text-anchor="end">34m</text>
-<text x="560" y="440" fill="#e6edf3" font-size="13">Watch · netBae</text><text x="810" y="440" fill="#8b98a9" font-size="12" text-anchor="end">41m</text>
+<text x="560" y="396" fill="#e6edf3" font-size="13">Release · netBae</text><text x="810" y="396" fill="#8b98a9" font-size="12" text-anchor="end">7m</text>
+<text x="560" y="418" fill="#e6edf3" font-size="13">Release · netBae</text><text x="810" y="418" fill="#8b98a9" font-size="12" text-anchor="end">39m</text>
+<text x="560" y="440" fill="#e6edf3" font-size="13">Watch · netBae</text><text x="810" y="440" fill="#8b98a9" font-size="12" text-anchor="end">46m</text>
 <text x="560" y="462" fill="#e6edf3" font-size="13">Push · klipper-backup</text><text x="810" y="462" fill="#8b98a9" font-size="12" text-anchor="end">3d</text>
-<text x="830" y="488" fill="#4b5563" font-size="10" text-anchor="end">updated 2026-10-15 13:07 UTC</text></svg>
+<text x="830" y="488" fill="#4b5563" font-size="10" text-anchor="end">updated 2026-10-15 13:12 UTC</text></svg>
