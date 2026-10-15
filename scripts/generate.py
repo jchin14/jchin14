@@ -1,6 +1,6 @@
 """Generate dashboard.svg from the public GitHub API."""
 import json, os, urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from html import escape
 
 USER = os.environ.get("GH_USER", "jchin14")
@@ -17,16 +17,36 @@ repos = get(f"users/{USER}/repos?per_page=100&sort=pushed")
 events = get(f"users/{USER}/events/public?per_page=100")
 now = datetime.now(timezone.utc)
 
+# Aggregate stats including private repos/commits (needs a PAT in PROFILE_TOKEN; only counts are published).
+Q = """{viewer{followers{totalCount} following{totalCount}
+ repositories(ownerAffiliations:OWNER,first:100){totalCount nodes{isPrivate isFork stargazerCount primaryLanguage{name}}}
+ contributionsCollection{totalCommitContributions restrictedContributionsCount
+  contributionCalendar{totalContributions weeks{contributionDays{date contributionCount}}}}}}"""
+priv = None
+tok = os.environ.get("PROFILE_TOKEN")
+if tok:
+    rq = urllib.request.Request("https://api.github.com/graphql", json.dumps({"query": Q}).encode(),
+                                {"Authorization": "Bearer " + tok})
+    priv = json.load(urllib.request.urlopen(rq))["data"]["viewer"]
+
 stars = sum(r["stargazers_count"] for r in repos)
 forks = sum(r["fork"] for r in repos)
 years = (now - datetime.fromisoformat(user["created_at"].replace("Z", "+00:00"))).days / 365.25
 tiles = [("Repos", user["public_repos"]), ("Stars", stars), ("Followers", user["followers"]),
          ("Following", user["following"]), ("Forks", forks), ("Years", f"{years:.1f}")]
+if priv:
+    nodes = priv["repositories"]["nodes"]
+    cc = priv["contributionsCollection"]
+    tiles = [("Repos", priv["repositories"]["totalCount"]), ("Private", sum(n["isPrivate"] for n in nodes)),
+             ("Stars", sum(n["stargazerCount"] for n in nodes)), ("Followers", priv["followers"]["totalCount"]),
+             ("Commits 1y", cc["totalCommitContributions"] + cc["restrictedContributionsCount"]),
+             ("Years", f"{years:.1f}")]
 
 langs = {}
-for r in repos:
-    if r["language"]:
-        langs[r["language"]] = langs.get(r["language"], 0) + 1
+for r in (priv["repositories"]["nodes"] if priv else repos):
+    name = (r["primaryLanguage"] or {}).get("name") if priv else r["language"]
+    if name:
+        langs[name] = langs.get(name, 0) + 1
 langs = sorted(langs.items(), key=lambda x: -x[1])[:5]
 
 days = 84
@@ -35,6 +55,9 @@ for e in events:
     d = (now.date() - datetime.fromisoformat(e["created_at"].replace("Z", "+00:00")).date()).days
     if 0 <= d < days:
         cnt[days - 1 - d] += len(e["payload"].get("commits", [1]))
+if priv:
+    cal = {d["date"]: d["contributionCount"] for w in priv["contributionsCollection"]["contributionCalendar"]["weeks"] for d in w["contributionDays"]}
+    cnt = [cal.get(str(now.date() - timedelta(days=days - 1 - i)), 0) for i in range(days)]
 mx = max(cnt + [1])
 
 def ago(s):
@@ -76,3 +99,8 @@ for i, e in enumerate(events[:4]):
              f'<text x="810" y="{y}" fill="#8b98a9" font-size="12" text-anchor="end">{ago(e["created_at"])}</text>')
 o.append(f'<text x="830" y="488" fill="#4b5563" font-size="10" text-anchor="end">updated {now:%Y-%m-%d %H:%M} UTC</text></svg>')
 open("dashboard.svg", "w").write("\n".join(o))
+
+json.dump({"updated": now.isoformat(), "includes_private": bool(priv),
+           "tiles": [{"label": k, "value": v} for k, v in tiles],
+           "languages": [{"name": k, "count": v} for k, v in langs],
+           "activity": cnt}, open("stats.json", "w"))
