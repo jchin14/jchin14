@@ -1,18 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="860" height="470" viewBox="0 0 860 470" font-family="Segoe UI,Helvetica,Arial,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="500" viewBox="0 0 860 500" font-family="Segoe UI,Helvetica,Arial,sans-serif">
 <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>
-<rect width="860" height="470" rx="18" fill="#0b0f17"/>
+<rect width="860" height="500" rx="18" fill="#0b0f17"/>
 <text x="30" y="46" fill="#e6edf3" font-size="26" font-weight="700">Jono · @jchin14</text>
 <rect x="30" y="58" width="120" height="3" rx="1.5" fill="url(#g)"/>
-<rect x="30" y="80" width="121" height="70" rx="12" fill="#121826" stroke="#1f2937"/><text x="44" y="118" fill="url(#g)" font-size="28" font-weight="700">8</text><text x="44" y="138" fill="#8b98a9" font-size="11" letter-spacing="1">REPOS</text>
+<rect x="30" y="80" width="121" height="70" rx="12" fill="#121826" stroke="#1f2937"/><text x="44" y="118" fill="url(#g)" font-size="28" font-weight="700">9</text><text x="44" y="138" fill="#8b98a9" font-size="11" letter-spacing="1">REPOS</text>
 <rect x="163" y="80" width="121" height="70" rx="12" fill="#121826" stroke="#1f2937"/><text x="177" y="118" fill="url(#g)" font-size="28" font-weight="700">4</text><text x="177" y="138" fill="#8b98a9" font-size="11" letter-spacing="1">STARS</text>
 <rect x="296" y="80" width="121" height="70" rx="12" fill="#121826" stroke="#1f2937"/><text x="310" y="118" fill="url(#g)" font-size="28" font-weight="700">9</text><text x="310" y="138" fill="#8b98a9" font-size="11" letter-spacing="1">FOLLOWERS</text>
 <rect x="429" y="80" width="121" height="70" rx="12" fill="#121826" stroke="#1f2937"/><text x="443" y="118" fill="url(#g)" font-size="28" font-weight="700">25</text><text x="443" y="138" fill="#8b98a9" font-size="11" letter-spacing="1">FOLLOWING</text>
 <rect x="562" y="80" width="121" height="70" rx="12" fill="#121826" stroke="#1f2937"/><text x="576" y="118" fill="url(#g)" font-size="28" font-weight="700">2</text><text x="576" y="138" fill="#8b98a9" font-size="11" letter-spacing="1">FORKS</text>
 <rect x="695" y="80" width="121" height="70" rx="12" fill="#121826" stroke="#1f2937"/><text x="709" y="118" fill="url(#g)" font-size="28" font-weight="700">7.2</text><text x="709" y="138" fill="#8b98a9" font-size="11" letter-spacing="1">YEARS</text>
 <text x="30" y="188" fill="#8b98a9" font-size="12" letter-spacing="1">LANGUAGES</text>
-<text x="30" y="214" fill="#e6edf3" font-size="13">Python</text><rect x="110" y="204" width="260" height="10" rx="5" fill="#1a2233"/><rect x="110" y="204" width="104" height="10" rx="5" fill="url(#g)"/><text x="380" y="214" fill="#8b98a9" font-size="12">2</text>
-<text x="30" y="242" fill="#e6edf3" font-size="13">HTML</text><rect x="110" y="232" width="260" height="10" rx="5" fill="#1a2233"/><rect x="110" y="232" width="104" height="10" rx="5" fill="url(#g)"/><text x="380" y="242" fill="#8b98a9" font-size="12">2</text>
-<text x="30" y="270" fill="#e6edf3" font-size="13">Nix</text><rect x="110" y="260" width="260" height="10" rx="5" fill="#1a2233"/><rect x="110" y="260" width="52" height="10" rx="5" fill="url(#g)"/><text x="380" y="270" fill="#8b98a9" font-size="12">1</text>
+<text x="30" y="214" fill="#e6edf3" font-size="13">Python</text><rect x="110" y="204" width="260" height="10" rx="5" fill="#1a2233"/><rect x="110" y="204" width="130" height="10" rx="5" fill="url(#g)"/><text x="380" y="214" fill="#8b98a9" font-size="12">3</text>
+<text x="30" y="242" fill="#e6edf3" font-size="13">HTML</text><rect x="110" y="232" width="260" height="10" rx="5" fill="#1a2233"/><rect x="110" y="232" width="87" height="10" rx="5" fill="url(#g)"/><text x="380" y="242" fill="#8b98a9" font-size="12">2</text>
+<text x="30" y="270" fill="#e6edf3" font-size="13">Nix</text><rect x="110" y="260" width="260" height="10" rx="5" fill="#1a2233"/><rect x="110" y="260" width="43" height="10" rx="5" fill="url(#g)"/><text x="380" y="270" fill="#8b98a9" font-size="12">1</text>
 <text x="450" y="188" fill="#8b98a9" font-size="12" letter-spacing="1">ACTIVITY · 12 WEEKS</text>
 <rect x="450" y="202" width="25" height="16" rx="3" fill="#1a2233"/>
 <rect x="450" y="222" width="25" height="16" rx="3" fill="#1a2233"/>
@@ -99,13 +99,13 @@
 <rect x="769" y="302" width="25" height="16" rx="3" fill="#1a2233"/>
 <rect x="769" y="322" width="25" height="16" rx="3" fill="rgba(52,211,153,0.55)"/>
 <text x="30" y="372" fill="#8b98a9" font-size="12" letter-spacing="1">RECENTLY PUSHED</text>
-<text x="30" y="396" fill="#e6edf3" font-size="14" font-weight="600">quest-adb-driver-arm64</text><text x="330" y="396" fill="#8b98a9" font-size="12">★ 0 · - · 5m ago</text>
-<text x="30" y="418" fill="#e6edf3" font-size="14" font-weight="600">netBae</text><text x="330" y="418" fill="#8b98a9" font-size="12">★ 1 · Python · 16m ago</text>
-<text x="30" y="440" fill="#e6edf3" font-size="14" font-weight="600">klipper-backup</text><text x="330" y="440" fill="#8b98a9" font-size="12">★ 1 · - · 3d ago</text>
-<text x="30" y="462" fill="#e6edf3" font-size="14" font-weight="600">binarypb-band-editor</text><text x="330" y="462" fill="#8b98a9" font-size="12">★ 1 · HTML · 10d ago</text>
+<text x="30" y="396" fill="#e6edf3" font-size="14" font-weight="600">jchin14</text><text x="330" y="396" fill="#8b98a9" font-size="12">★ 0 · Python · 4m ago</text>
+<text x="30" y="418" fill="#e6edf3" font-size="14" font-weight="600">quest-adb-driver-arm64</text><text x="330" y="418" fill="#8b98a9" font-size="12">★ 0 · 11m ago</text>
+<text x="30" y="440" fill="#e6edf3" font-size="14" font-weight="600">netBae</text><text x="330" y="440" fill="#8b98a9" font-size="12">★ 1 · Python · 21m ago</text>
+<text x="30" y="462" fill="#e6edf3" font-size="14" font-weight="600">klipper-backup</text><text x="330" y="462" fill="#8b98a9" font-size="12">★ 1 · 3d ago</text>
 <text x="560" y="372" fill="#8b98a9" font-size="12" letter-spacing="1">RECENT EVENTS</text>
-<text x="560" y="396" fill="#e6edf3" font-size="13">Release · netBae</text><text x="810" y="396" fill="#8b98a9" font-size="12" text-anchor="end">16m</text>
-<text x="560" y="418" fill="#e6edf3" font-size="13">Watch · netBae</text><text x="810" y="418" fill="#8b98a9" font-size="12" text-anchor="end">22m</text>
+<text x="560" y="396" fill="#e6edf3" font-size="13">Release · netBae</text><text x="810" y="396" fill="#8b98a9" font-size="12" text-anchor="end">21m</text>
+<text x="560" y="418" fill="#e6edf3" font-size="13">Watch · netBae</text><text x="810" y="418" fill="#8b98a9" font-size="12" text-anchor="end">28m</text>
 <text x="560" y="440" fill="#e6edf3" font-size="13">Push · klipper-backup</text><text x="810" y="440" fill="#8b98a9" font-size="12" text-anchor="end">3d</text>
 <text x="560" y="462" fill="#e6edf3" font-size="13">Push · klipper-backup</text><text x="810" y="462" fill="#8b98a9" font-size="12" text-anchor="end">3d</text>
-<text x="830" y="456" fill="#4b5563" font-size="10" text-anchor="end">updated 2026-10-15 12:48 UTC</text></svg>
+<text x="830" y="488" fill="#4b5563" font-size="10" text-anchor="end">updated 2026-10-15 12:54 UTC</text></svg>
