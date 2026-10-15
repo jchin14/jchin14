@@ -39,7 +39,7 @@ if priv:
     mine = [n for n in nodes if n["owner"]["login"].lower() == USER.lower()]
     cc = priv["contributionsCollection"]
     tiles = [("Repos", len(mine)), ("Private", sum(n["isPrivate"] for n in mine)),
-             ("Shared repos", len(nodes) - len(mine)), ("Stars", sum(n["stargazerCount"] for n in nodes)),
+             ("Contributed to", len(nodes) - len(mine)), ("Stars", sum(n["stargazerCount"] for n in nodes)),
              ("Followers", priv["followers"]["totalCount"]),
              ("Commits 1y", cc["totalCommitContributions"] + cc["restrictedContributionsCount"])]
 
@@ -69,13 +69,13 @@ o = ['<svg xmlns="http://www.w3.org/2000/svg" width="860" height="500" viewBox="
      '<defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>',
      '<rect width="860" height="500" rx="18" fill="#0b0f17"/>',
      f'<text x="30" y="46" fill="#e6edf3" font-size="26" font-weight="700">{escape(user.get("name") or USER)} · @{USER}</text>',
-     f'<text x="830" y="46" fill="#8b98a9" font-size="13" text-anchor="end">{years:.1f} years on GitHub</text>',
+     f'<text x="830" y="46" fill="url(#g)" font-size="26" font-weight="700" text-anchor="end">{years:.1f} years <tspan fill="#8b98a9" font-size="15" font-weight="400">on GitHub</tspan></text>',
      '<rect x="30" y="58" width="120" height="3" rx="1.5" fill="url(#g)"/>']
 for i, (k, v) in enumerate(tiles):
     x = 30 + i * 133
     o.append(f'<rect x="{x}" y="80" width="121" height="70" rx="12" fill="#121826" stroke="#1f2937"/>'
              f'<text x="{x+14}" y="118" fill="url(#g)" font-size="28" font-weight="700">{v}</text>'
-             f'<text x="{x+14}" y="138" fill="#8b98a9" font-size="11" letter-spacing="1">{k.upper()}</text>')
+             f'<text x="{x+14}" y="138" fill="#8b98a9" font-size="{10 if len(k) > 10 else 11}" letter-spacing="{0.5 if len(k) > 10 else 1}">{k.upper()}</text>')
 o.append('<text x="30" y="188" fill="#8b98a9" font-size="12" letter-spacing="1">LANGUAGES</text>')
 tot = sum(v for _, v in langs) or 1
 for i, (k, v) in enumerate(langs):
