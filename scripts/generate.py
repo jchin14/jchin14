@@ -93,69 +93,84 @@ def ago(s):
     return f"{max(1, int(sec // 60))}m" if sec < 3600 else f"{int(sec // 3600)}h" if sec < 86400 else f"{int(sec // 86400)}d"
 
 
-# Palette and type taken from jchin.au / portfolio.jchin.au
-PAPER, INK, LINE, MUTED, BLUE, GREEN, LIME, TRACK = "#f7f6f1", "#151819", "#cbcfc8", "#626765", "#0d5bd7", "#237351", "#c3f144", "#e9e8e0"
-SANS = "'DM Sans','Helvetica Neue',Helvetica,Arial,sans-serif"
-SERIF = "'Fraunces',Georgia,'Times New Roman',serif"
-MONO = "'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
+THEMES = {
+    "light": dict(paper="#f7f6f1", ink="#151819", line="#cbcfc8", muted="#626765", blue="#0d5bd7", green="#237351", track="#e9e8e0",
+                          heat=["#cfe6d2", "#9fcfa8", "#52a07a", "#237351"], blob1="#aecbff", o1=".55", blob2="#ffd9b8", o2=".55"),
+    "dark": dict(paper="#0f1211", ink="#e8eae6", line="#2a2f2d", muted="#8d9390", blue="#6ea2ff", green="#39d353", track="#1d2220",
+                               heat=["#0e4429", "#006d32", "#26a641", "#39d353"], blob1="#1d3a78", o1=".55", blob2="#5a3a1f", o2=".4"),
+}
 
 
-def level(c):
-    if not c:
-        return TRACK
-    r = c / mx
-    return "#cfe6d2" if r <= .25 else "#9fcfa8" if r <= .5 else "#52a07a" if r <= .75 else GREEN
+def render(fname, T):
+    # Palette and type taken from jchin.au / portfolio.jchin.au
+    PAPER, INK, LINE, MUTED, BLUE, GREEN, LIME, TRACK = T["paper"], T["ink"], T["line"], T["muted"], T["blue"], T["green"], "#c3f144", T["track"]
+    SANS = "'DM Sans','Helvetica Neue',Helvetica,Arial,sans-serif"
+    SERIF = "'Fraunces',Georgia,'Times New Roman',serif"
+    MONO = "'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
 
 
-W, H = 860, 510
-LBL = f'fill="{MUTED}" font-size="10" letter-spacing="1.4" font-family="{MONO}"'
-o = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="{SANS}">',
-     '<defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient><radialGradient id="b" cx=".85" cy=".05" r=".5"><stop offset="0" stop-color="#aecbff" stop-opacity=".55"/><stop offset="1" stop-color="#aecbff" stop-opacity="0"/></radialGradient>'
-     '<radialGradient id="p" cx=".05" cy=".98" r=".4"><stop offset="0" stop-color="#ffd9b8" stop-opacity=".55"/><stop offset="1" stop-color="#ffd9b8" stop-opacity="0"/></radialGradient></defs>',
-     f'<rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="2" fill="{PAPER}" stroke="{LINE}"/>',
-     f'<rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="2" fill="url(#b)"/><rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="2" fill="url(#p)"/>',
-     f'<text x="24" y="46" font-size="26" font-weight="700" fill="{INK}">{escape(user.get("name") or USER)} · @{USER}</text>',
-     '<rect x="24" y="58" width="120" height="3" rx="1.5" fill="url(#g)"/>',
-     f'<text x="{W-24}" y="46" font-size="26" font-weight="700" fill="url(#g)" text-anchor="end">{years:.1f} years'
-     f'<tspan fill="{MUTED}" font-size="14" font-weight="400"> on GitHub</tspan></text>',
-     '<g transform="translate(0,-34)">']
-colw = (W - 48) / 6
-for i, (k, v) in enumerate(tiles):
-    x = 24 + i * colw
-    if i:
-        o.append(f'<path d="M{x-10:.0f} 134V184" stroke="{LINE}"/>')
-    o.append(f'<text x="{x:.0f}" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">{v}</text>'
-             f'<text x="{x:.0f}" y="180" {LBL.replace('font-size="10"', 'font-size="9"')}>{k.upper()}</text>')
-o.append(f'<path d="M24 204H{W-24}" stroke="{LINE}"/>')
-o.append(f'<text x="24" y="230" {LBL}>LANGUAGES · BY COMMITS</text>')
-tot = sum(v for _, v in langs) or 1
-for i, (k, v) in enumerate(langs):
-    y = 248 + i * 26
-    o.append(f'<text x="24" y="{y+10}" font-size="13" font-weight="500" fill="{INK}">{escape(k)}</text>'
-             f'<rect x="130" y="{y+3}" width="230" height="6" rx="3" fill="{TRACK}"/>'
-             f'<rect x="130" y="{y+3}" width="{max(2, 230*v/tot):.0f}" height="6" rx="3" fill="url(#g)"/>'
-             f'<text x="400" y="{y+10}" font-family="{MONO}" font-size="11" fill="{MUTED}" text-anchor="end">{v}</text>')
-o.append(f'<text x="470" y="230" {LBL}>ACTIVITY · LAST 12 WEEKS</text>')
-for i, c in enumerate(cnt):
-    x, y = 470 + (i // 7) * 32, 242 + (i % 7) * 17
-    o.append(f'<rect x="{x}" y="{y}" width="28" height="13" fill="{level(c)}"/>')
-o.append(f'<text x="470" y="378" {LBL.replace('font-size="10"', 'font-size="9"')}>12 WEEKS AGO</text>'
-         f'<text x="{470 + 11*32 + 28}" y="378" {LBL.replace('font-size="10"', 'font-size="9"')} text-anchor="end">LAST WEEK</text>')
-o.append(f'<path d="M24 396H{W-24}" stroke="{LINE}"/>')
-o.append(f'<text x="24" y="420" {LBL}>RECENTLY PUSHED</text><text x="470" y="420" {LBL}>RECENT EVENTS</text>')
-for i, r in enumerate(repos[:4]):
-    y = 444 + i * 20
-    o.append(f'<text x="24" y="{y}" font-size="14" font-weight="500" fill="{BLUE}">{escape(r["name"])[:26]}</text>'
-             f'<text x="420" y="{y}" font-family="{MONO}" font-size="11" fill="{MUTED}" text-anchor="end">'
-             f'★ {r["stargazers_count"]} · {escape(r["language"] + " · " if r["language"] else "")}{ago(r["pushed_at"])}</text>')
-for i, e in enumerate(events[:4]):
-    y = 444 + i * 20
-    o.append(f'<text x="470" y="{y}" font-size="14" font-weight="500" fill="{INK}">{escape(e["type"].replace("Event", ""))}'
-             f'<tspan font-weight="400" fill="{MUTED}"> {escape(e["repo"]["name"].split("/")[1])[:22]}</tspan></text>'
-             f'<text x="{W-24}" y="{y}" font-family="{MONO}" font-size="11" fill="{MUTED}" text-anchor="end">{ago(e["created_at"])}</text>')
-o.append('</g>')
-o.append(f'<text x="{W-24}" y="{H-8}" font-family="{MONO}" font-size="9" fill="#9da2a0" text-anchor="end">UPDATED {now:%Y-%m-%d %H:%M} UTC</text></svg>')
-open("dashboard.svg", "w").write("\n".join(o))
+    def level(c):
+        if not c:
+            return TRACK
+        r = c / mx
+        return T["heat"][0] if r <= .25 else T["heat"][1] if r <= .5 else T["heat"][2] if r <= .75 else T["heat"][3]
+
+
+    W, H = 860, 510
+    LBL = f'fill="{MUTED}" font-size="10" letter-spacing="1.4" font-family="{MONO}"'
+    o = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="{SANS}">',
+         f'<defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient><radialGradient id="b" cx=".85" cy=".05" r=".5"><stop offset="0" stop-color="{T["blob1"]}" stop-opacity="{T["o1"]}"/><stop offset="1" stop-color="{T["blob1"]}" stop-opacity="0"/></radialGradient>'
+         f'<radialGradient id="p" cx=".05" cy=".98" r=".4"><stop offset="0" stop-color="{T["blob2"]}" stop-opacity="{T["o2"]}"/><stop offset="1" stop-color="{T["blob2"]}" stop-opacity="0"/></radialGradient></defs>',
+         f'<rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="2" fill="{PAPER}" stroke="{LINE}"/>',
+         f'<rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="2" fill="url(#b)"/><rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="2" fill="url(#p)"/>',
+         f'<text x="24" y="46" font-size="26" font-weight="700" fill="{INK}">{escape(user.get("name") or USER)} · @{USER}</text>',
+         '<rect x="24" y="58" width="120" height="3" rx="1.5" fill="url(#g)"/>',
+         f'<text x="{W-24}" y="46" font-size="26" font-weight="700" fill="url(#g)" text-anchor="end">{years:.1f} years'
+         f'<tspan fill="{MUTED}" font-size="14" font-weight="400"> on GitHub</tspan></text>',
+         '<g transform="translate(0,-34)">']
+    colw = (W - 48) / 6
+    for i, (k, v) in enumerate(tiles):
+        x = 24 + i * colw
+        if i:
+            o.append(f'<path d="M{x-10:.0f} 134V184" stroke="{LINE}"/>')
+        o.append(f'<text x="{x:.0f}" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">{v}</text>'
+                 f'<text x="{x:.0f}" y="180" {LBL.replace('font-size="10"', 'font-size="9"')}>{k.upper()}</text>')
+    o.append(f'<path d="M24 204H{W-24}" stroke="{LINE}"/>')
+    o.append(f'<text x="24" y="230" {LBL}>LANGUAGES · BY COMMITS</text>')
+    tot = sum(v for _, v in langs) or 1
+    for i, (k, v) in enumerate(langs):
+        y = 248 + i * 26
+        o.append(f'<text x="24" y="{y+10}" font-size="13" font-weight="500" fill="{INK}">{escape(k)}</text>'
+                 f'<rect x="130" y="{y+3}" width="230" height="6" rx="3" fill="{TRACK}"/>'
+                 f'<rect x="130" y="{y+3}" width="{max(2, 230*v/tot):.0f}" height="6" rx="3" fill="url(#g)"/>'
+                 f'<text x="400" y="{y+10}" font-family="{MONO}" font-size="11" fill="{MUTED}" text-anchor="end">{v}</text>')
+    o.append(f'<text x="470" y="230" {LBL}>ACTIVITY · LAST 12 WEEKS</text>')
+    for i, c in enumerate(cnt):
+        x, y = 470 + (i // 7) * 32, 242 + (i % 7) * 17
+        o.append(f'<rect x="{x}" y="{y}" width="28" height="13" fill="{level(c)}"/>')
+    o.append(f'<text x="470" y="378" {LBL.replace('font-size="10"', 'font-size="9"')}>12 WEEKS AGO</text>'
+             f'<text x="{470 + 11*32 + 28}" y="378" {LBL.replace('font-size="10"', 'font-size="9"')} text-anchor="end">LAST WEEK</text>')
+    o.append(f'<path d="M24 396H{W-24}" stroke="{LINE}"/>')
+    o.append(f'<text x="24" y="420" {LBL}>RECENTLY PUSHED</text><text x="470" y="420" {LBL}>RECENT EVENTS</text>')
+    for i, r in enumerate(repos[:4]):
+        y = 444 + i * 20
+        o.append(f'<text x="24" y="{y}" font-size="14" font-weight="500" fill="{BLUE}">{escape(r["name"])[:26]}</text>'
+                 f'<text x="420" y="{y}" font-family="{MONO}" font-size="11" fill="{MUTED}" text-anchor="end">'
+                 f'★ {r["stargazers_count"]} · {escape(r["language"] + " · " if r["language"] else "")}{ago(r["pushed_at"])}</text>')
+    for i, e in enumerate(events[:4]):
+        y = 444 + i * 20
+        o.append(f'<text x="470" y="{y}" font-size="14" font-weight="500" fill="{INK}">{escape(e["type"].replace("Event", ""))}'
+                 f'<tspan font-weight="400" fill="{MUTED}"> {escape(e["repo"]["name"].split("/")[1])[:22]}</tspan></text>'
+                 f'<text x="{W-24}" y="{y}" font-family="{MONO}" font-size="11" fill="{MUTED}" text-anchor="end">{ago(e["created_at"])}</text>')
+    o.append('</g>')
+    o.append(f'<text x="{W-24}" y="{H-8}" font-family="{MONO}" font-size="9" fill="#9da2a0" text-anchor="end">UPDATED {now:%Y-%m-%d %H:%M} UTC</text></svg>')
+    open(fname, "w").write("\n".join(o))
+
+
+# Light and dark variants; the README <picture> picks one from the viewer's own colour-scheme setting.
+render("dashboard.svg", THEMES["light"])
+render("dashboard-dark.svg", THEMES["dark"])
+
 
 json.dump({"updated": now.isoformat(), "includes_private": bool(priv),
            "tiles": [{"label": k, "value": v} for k, v in tiles],
