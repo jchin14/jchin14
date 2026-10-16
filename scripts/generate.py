@@ -93,56 +93,67 @@ def ago(s):
     return f"{max(1, int(sec // 60))}m" if sec < 3600 else f"{int(sec // 3600)}h" if sec < 86400 else f"{int(sec // 86400)}d"
 
 
+# Palette and type taken from jchin.au / portfolio.jchin.au
+PAPER, INK, LINE, MUTED, BLUE, GREEN, LIME, TRACK = "#f7f6f1", "#151819", "#cbcfc8", "#626765", "#0d5bd7", "#237351", "#c3f144", "#e9e8e0"
+SANS = "'DM Sans','Helvetica Neue',Helvetica,Arial,sans-serif"
+SERIF = "'Fraunces',Georgia,'Times New Roman',serif"
+MONO = "'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
+
+
 def level(c):
     if not c:
-        return "#161b22"
+        return TRACK
     r = c / mx
-    return "#0e4429" if r <= .25 else "#006d32" if r <= .5 else "#26a641" if r <= .75 else "#39d353"
+    return "#cfe6d2" if r <= .25 else "#9fcfa8" if r <= .5 else "#52a07a" if r <= .75 else GREEN
 
 
-W, H = 860, 492
-M = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
-LBL = f'fill="#8b949e" font-size="11" letter-spacing="1.2" font-family="{M}"'
-o = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="{M}">',
-     f'<rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="6" fill="#0d1117" stroke="#30363d"/>',
-     f'<text x="24" y="46" font-size="24" font-weight="600" fill="#e6edf3">{escape(user.get("name") or USER)}'
-     f'<tspan fill="#8b949e" font-size="16" font-weight="400"> @{USER}</tspan></text>',
-     f'<text x="{W-24}" y="46" font-size="24" font-weight="600" fill="#58a6ff" text-anchor="end">{years:.1f} yrs'
-     f'<tspan fill="#8b949e" font-size="13" font-weight="400"> on GitHub</tspan></text>',
-     f'<path d="M0 68H{W}" stroke="#30363d"/>']
+W, H = 860, 530
+LBL = f'fill="{MUTED}" font-size="10" letter-spacing="1.4" font-family="{MONO}"'
+o = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="{SANS}">',
+     '<defs><radialGradient id="b" cx=".85" cy=".05" r=".5"><stop offset="0" stop-color="#aecbff" stop-opacity=".55"/><stop offset="1" stop-color="#aecbff" stop-opacity="0"/></radialGradient>'
+     '<radialGradient id="p" cx=".05" cy=".98" r=".4"><stop offset="0" stop-color="#ffd9b8" stop-opacity=".55"/><stop offset="1" stop-color="#ffd9b8" stop-opacity="0"/></radialGradient></defs>',
+     f'<rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="2" fill="{PAPER}" stroke="{LINE}"/>',
+     f'<rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="2" fill="url(#b)"/><rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="2" fill="url(#p)"/>',
+     f'<circle cx="30" cy="30" r="3.5" fill="{GREEN}"/><text x="42" y="34" {LBL}>JONATHAN CHIN · MELBOURNE · GITHUB</text>',
+     f'<text x="24" y="86" font-size="52" font-weight="600" letter-spacing="-2.5" fill="{INK}">{escape(user.get("name") or USER)}<tspan fill="{BLUE}">.</tspan></text>',
+     f'<text x="{W-24}" y="82" font-family="{SERIF}" font-size="46" letter-spacing="-1.5" fill="{INK}" text-anchor="end">{years:.1f} yrs</text>',
+     f'<text x="{W-24}" y="102" {LBL} text-anchor="end">ON GITHUB · @{USER.upper()}</text>',
+     f'<path d="M24 118H{W-24}" stroke="{INK}" stroke-width="1.5"/>']
 colw = (W - 48) / 6
 for i, (k, v) in enumerate(tiles):
     x = 24 + i * colw
-    if i:
-        o.append(f'<path d="M{x-12:.0f} 84V138" stroke="#21262d"/>')
-    o.append(f'<text x="{x:.0f}" y="116" font-size="26" font-weight="600" fill="#e6edf3">{v}</text>'
-             f'<text x="{x:.0f}" y="134" {LBL.replace('font-size="11"', 'font-size="10"')}>{k.upper()}</text>')
-o.append(f'<path d="M0 156H{W}" stroke="#30363d"/>')
-o.append(f'<text x="24" y="184" {LBL}>LANGUAGES · BY COMMITS</text>')
+    if k.startswith("Commits"):
+        o.append(f'<rect x="{x-10:.0f}" y="128" width="{colw-4:.0f}" height="60" rx="2" fill="{LIME}"/>')
+    elif i:
+        o.append(f'<path d="M{x-10:.0f} 134V184" stroke="{LINE}"/>')
+    o.append(f'<text x="{x:.0f}" y="165" font-size="30" font-weight="600" letter-spacing="-1" fill="{INK}">{v}</text>'
+             f'<text x="{x:.0f}" y="180" {LBL.replace('font-size="10"', 'font-size="9"')}>{k.upper()}</text>')
+o.append(f'<path d="M24 204H{W-24}" stroke="{LINE}"/>')
+o.append(f'<text x="24" y="230" {LBL}>LANGUAGES · BY COMMITS</text>')
 tot = sum(v for _, v in langs) or 1
 for i, (k, v) in enumerate(langs):
-    y = 204 + i * 26
-    o.append(f'<text x="24" y="{y+9}" font-size="12" fill="#c9d1d9">{escape(k)}</text>'
-             f'<rect x="130" y="{y+2}" width="230" height="6" rx="1" fill="#21262d"/>'
-             f'<rect x="130" y="{y+2}" width="{max(2, 230*v/tot):.0f}" height="6" rx="1" fill="#58a6ff"/>'
-             f'<text x="400" y="{y+9}" font-size="12" fill="#8b949e" text-anchor="end">{v}</text>')
-o.append(f'<text x="470" y="184" {LBL}>ACTIVITY · 12 WEEKS</text>')
+    y = 248 + i * 26
+    o.append(f'<text x="24" y="{y+10}" font-size="13" font-weight="500" fill="{INK}">{escape(k)}</text>'
+             f'<rect x="130" y="{y+3}" width="230" height="6" fill="{TRACK}"/>'
+             f'<rect x="130" y="{y+3}" width="{max(2, 230*v/tot):.0f}" height="6" fill="{BLUE}"/>'
+             f'<text x="400" y="{y+10}" font-family="{MONO}" font-size="11" fill="{MUTED}" text-anchor="end">{v}</text>')
+o.append(f'<text x="470" y="230" {LBL}>ACTIVITY · 12 WEEKS</text>')
 for i, c in enumerate(cnt):
-    x, y = 470 + (i // 7) * 25, 198 + (i % 7) * 20
-    o.append(f'<rect x="{x}" y="{y}" width="21" height="16" rx="2" fill="{level(c)}"/>')
-o.append(f'<path d="M0 352H{W}" stroke="#30363d"/>')
-o.append(f'<text x="24" y="378" {LBL}>RECENTLY PUSHED</text><text x="470" y="378" {LBL}>RECENT EVENTS</text>')
+    x, y = 470 + (i // 7) * 32, 242 + (i % 7) * 17
+    o.append(f'<rect x="{x}" y="{y}" width="28" height="13" fill="{level(c)}"/>')
+o.append(f'<path d="M24 384H{W-24}" stroke="{LINE}"/>')
+o.append(f'<text x="24" y="408" {LBL}>RECENTLY PUSHED</text><text x="470" y="408" {LBL}>RECENT EVENTS</text>')
 for i, r in enumerate(repos[:4]):
-    y = 402 + i * 20
-    o.append(f'<text x="24" y="{y}" font-size="13" fill="#58a6ff">{escape(r["name"])[:26]}</text>'
-             f'<text x="420" y="{y}" font-size="12" fill="#8b949e" text-anchor="end">'
+    y = 432 + i * 20
+    o.append(f'<text x="24" y="{y}" font-size="14" font-weight="500" fill="{BLUE}">{escape(r["name"])[:26]}</text>'
+             f'<text x="420" y="{y}" font-family="{MONO}" font-size="11" fill="{MUTED}" text-anchor="end">'
              f'★ {r["stargazers_count"]} · {escape(r["language"] + " · " if r["language"] else "")}{ago(r["pushed_at"])}</text>')
 for i, e in enumerate(events[:4]):
-    y = 402 + i * 20
-    o.append(f'<text x="470" y="{y}" font-size="13" fill="#c9d1d9">{escape(e["type"].replace("Event", ""))}'
-             f'<tspan fill="#8b949e"> {escape(e["repo"]["name"].split("/")[1])[:22]}</tspan></text>'
-             f'<text x="{W-24}" y="{y}" font-size="12" fill="#8b949e" text-anchor="end">{ago(e["created_at"])}</text>')
-o.append(f'<text x="{W-24}" y="{H-14}" font-size="10" fill="#484f58" text-anchor="end">updated {now:%Y-%m-%d %H:%M} UTC</text></svg>')
+    y = 432 + i * 20
+    o.append(f'<text x="470" y="{y}" font-size="14" font-weight="500" fill="{INK}">{escape(e["type"].replace("Event", ""))}'
+             f'<tspan font-weight="400" fill="{MUTED}"> {escape(e["repo"]["name"].split("/")[1])[:22]}</tspan></text>'
+             f'<text x="{W-24}" y="{y}" font-family="{MONO}" font-size="11" fill="{MUTED}" text-anchor="end">{ago(e["created_at"])}</text>')
+o.append(f'<text x="{W-24}" y="{H-8}" font-family="{MONO}" font-size="9" fill="#9da2a0" text-anchor="end">UPDATED {now:%Y-%m-%d %H:%M} UTC</text></svg>')
 open("dashboard.svg", "w").write("\n".join(o))
 
 json.dump({"updated": now.isoformat(), "includes_private": bool(priv),
