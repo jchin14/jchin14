@@ -20,6 +20,7 @@ now = datetime.now(timezone.utc)
 # Aggregate stats including private repos/commits (needs a PAT in PROFILE_TOKEN; only counts are published).
 Q = """{viewer{followers{totalCount} following{totalCount}
  repositories(ownerAffiliations:[OWNER,COLLABORATOR,ORGANIZATION_MEMBER],first:100){totalCount nodes{nameWithOwner isPrivate isFork stargazerCount primaryLanguage{name} owner{login}}}
+ organizations(first:50){nodes{repositories(first:100){nodes{nameWithOwner isPrivate isFork stargazerCount primaryLanguage{name} owner{login}}}}}
  contributionsCollection{totalCommitContributions restrictedContributionsCount
   contributionCalendar{totalContributions weeks{contributionDays{date contributionCount}}}}}}"""
 priv = None
@@ -35,7 +36,8 @@ years = (now - datetime.fromisoformat(user["created_at"].replace("Z", "+00:00"))
 tiles = [("Repos", user["public_repos"]), ("Stars", stars), ("Followers", user["followers"]),
          ("Following", user["following"]), ("Forks", forks), ("Years", f"{years:.1f}")]
 if priv:
-    nodes = {n["nameWithOwner"]: n for n in priv["repositories"]["nodes"]}.values()
+    allr = priv["repositories"]["nodes"] + [r for o in priv["organizations"]["nodes"] for r in o["repositories"]["nodes"]]
+    nodes = {n["nameWithOwner"]: n for n in allr}.values()
     mine = [n for n in nodes if n["owner"]["login"].lower() == USER.lower()]
     cc = priv["contributionsCollection"]
     tiles = [("Repos", len(mine)), ("Private", sum(n["isPrivate"] for n in mine)),

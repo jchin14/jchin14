@@ -6,16 +6,16 @@
 <rect x="30" y="58" width="120" height="3" rx="1.5" fill="url(#g)"/>
 <rect x="30" y="80" width="121" height="70" rx="12" fill="#121826" stroke="#1f2937"/><text x="44" y="118" fill="url(#g)" font-size="28" font-weight="700">32</text><text x="44" y="138" fill="#8b98a9" font-size="11" letter-spacing="1">REPOS</text>
 <rect x="163" y="80" width="121" height="70" rx="12" fill="#121826" stroke="#1f2937"/><text x="177" y="118" fill="url(#g)" font-size="28" font-weight="700">23</text><text x="177" y="138" fill="#8b98a9" font-size="11" letter-spacing="1">PRIVATE</text>
-<rect x="296" y="80" width="121" height="70" rx="12" fill="#121826" stroke="#1f2937"/><text x="310" y="118" fill="url(#g)" font-size="28" font-weight="700">42</text><text x="310" y="138" fill="#8b98a9" font-size="10" letter-spacing="0.5">CONTRIBUTED TO</text>
-<rect x="429" y="80" width="121" height="70" rx="12" fill="#121826" stroke="#1f2937"/><text x="443" y="118" fill="url(#g)" font-size="28" font-weight="700">38</text><text x="443" y="138" fill="#8b98a9" font-size="11" letter-spacing="1">STARS</text>
+<rect x="296" y="80" width="121" height="70" rx="12" fill="#121826" stroke="#1f2937"/><text x="310" y="118" fill="url(#g)" font-size="28" font-weight="700">95</text><text x="310" y="138" fill="#8b98a9" font-size="10" letter-spacing="0.5">CONTRIBUTED TO</text>
+<rect x="429" y="80" width="121" height="70" rx="12" fill="#121826" stroke="#1f2937"/><text x="443" y="118" fill="url(#g)" font-size="28" font-weight="700">73</text><text x="443" y="138" fill="#8b98a9" font-size="11" letter-spacing="1">STARS</text>
 <rect x="562" y="80" width="121" height="70" rx="12" fill="#121826" stroke="#1f2937"/><text x="576" y="118" fill="url(#g)" font-size="28" font-weight="700">9</text><text x="576" y="138" fill="#8b98a9" font-size="11" letter-spacing="1">FOLLOWERS</text>
-<rect x="695" y="80" width="121" height="70" rx="12" fill="#121826" stroke="#1f2937"/><text x="709" y="118" fill="url(#g)" font-size="28" font-weight="700">354</text><text x="709" y="138" fill="#8b98a9" font-size="11" letter-spacing="1">COMMITS 1Y</text>
+<rect x="695" y="80" width="121" height="70" rx="12" fill="#121826" stroke="#1f2937"/><text x="709" y="118" fill="url(#g)" font-size="28" font-weight="700">371</text><text x="709" y="138" fill="#8b98a9" font-size="11" letter-spacing="1">COMMITS 1Y</text>
 <text x="30" y="188" fill="#8b98a9" font-size="12" letter-spacing="1">LANGUAGES</text>
-<text x="30" y="214" fill="#e6edf3" font-size="13">C++</text><rect x="110" y="204" width="260" height="10" rx="5" fill="#1a2233"/><rect x="110" y="204" width="85" height="10" rx="5" fill="url(#g)"/><text x="380" y="214" fill="#8b98a9" font-size="12">17</text>
-<text x="30" y="242" fill="#e6edf3" font-size="13">Python</text><rect x="110" y="232" width="260" height="10" rx="5" fill="#1a2233"/><rect x="110" y="232" width="80" height="10" rx="5" fill="url(#g)"/><text x="380" y="242" fill="#8b98a9" font-size="12">16</text>
-<text x="30" y="270" fill="#e6edf3" font-size="13">C</text><rect x="110" y="260" width="260" height="10" rx="5" fill="#1a2233"/><rect x="110" y="260" width="45" height="10" rx="5" fill="url(#g)"/><text x="380" y="270" fill="#8b98a9" font-size="12">9</text>
-<text x="30" y="298" fill="#e6edf3" font-size="13">TypeScript</text><rect x="110" y="288" width="260" height="10" rx="5" fill="#1a2233"/><rect x="110" y="288" width="30" height="10" rx="5" fill="url(#g)"/><text x="380" y="298" fill="#8b98a9" font-size="12">6</text>
-<text x="30" y="326" fill="#e6edf3" font-size="13">Java</text><rect x="110" y="316" width="260" height="10" rx="5" fill="#1a2233"/><rect x="110" y="316" width="20" height="10" rx="5" fill="url(#g)"/><text x="380" y="326" fill="#8b98a9" font-size="12">4</text>
+<text x="30" y="214" fill="#e6edf3" font-size="13">Python</text><rect x="110" y="204" width="260" height="10" rx="5" fill="#1a2233"/><rect x="110" y="204" width="96" height="10" rx="5" fill="url(#g)"/><text x="380" y="214" fill="#8b98a9" font-size="12">32</text>
+<text x="30" y="242" fill="#e6edf3" font-size="13">C++</text><rect x="110" y="232" width="260" height="10" rx="5" fill="#1a2233"/><rect x="110" y="232" width="81" height="10" rx="5" fill="url(#g)"/><text x="380" y="242" fill="#8b98a9" font-size="12">27</text>
+<text x="30" y="270" fill="#e6edf3" font-size="13">C</text><rect x="110" y="260" width="260" height="10" rx="5" fill="#1a2233"/><rect x="110" y="260" width="45" height="10" rx="5" fill="url(#g)"/><text x="380" y="270" fill="#8b98a9" font-size="12">15</text>
+<text x="30" y="298" fill="#e6edf3" font-size="13">TypeScript</text><rect x="110" y="288" width="260" height="10" rx="5" fill="#1a2233"/><rect x="110" y="288" width="27" height="10" rx="5" fill="url(#g)"/><text x="380" y="298" fill="#8b98a9" font-size="12">9</text>
+<text x="30" y="326" fill="#e6edf3" font-size="13">Java</text><rect x="110" y="316" width="260" height="10" rx="5" fill="#1a2233"/><rect x="110" y="316" width="12" height="10" rx="5" fill="url(#g)"/><text x="380" y="326" fill="#8b98a9" font-size="12">4</text>
 <text x="450" y="188" fill="#8b98a9" font-size="12" letter-spacing="1">ACTIVITY · 12 WEEKS</text>
 <rect x="450" y="202" width="25" height="16" rx="3" fill="#1a2233"/>
 <rect x="450" y="222" width="25" height="16" rx="3" fill="#1a2233"/>
@@ -100,15 +100,15 @@
 <rect x="769" y="262" width="25" height="16" rx="3" fill="rgba(52,211,153,0.27)"/>
 <rect x="769" y="282" width="25" height="16" rx="3" fill="#1a2233"/>
 <rect x="769" y="302" width="25" height="16" rx="3" fill="rgba(52,211,153,0.88)"/>
-<rect x="769" y="322" width="25" height="16" rx="3" fill="rgba(52,211,153,0.44)"/>
+<rect x="769" y="322" width="25" height="16" rx="3" fill="rgba(52,211,153,0.51)"/>
 <text x="30" y="372" fill="#8b98a9" font-size="12" letter-spacing="1">RECENTLY PUSHED</text>
-<text x="30" y="396" fill="#e6edf3" font-size="14" font-weight="600">jchin14</text><text x="330" y="396" fill="#8b98a9" font-size="12">★ 0 · Python · 6h ago</text>
-<text x="30" y="418" fill="#e6edf3" font-size="14" font-weight="600">klipper-backup</text><text x="330" y="418" fill="#8b98a9" font-size="12">★ 1 · 7h ago</text>
-<text x="30" y="440" fill="#e6edf3" font-size="14" font-weight="600">netBae</text><text x="330" y="440" fill="#8b98a9" font-size="12">★ 1 · Python · 13h ago</text>
-<text x="30" y="462" fill="#e6edf3" font-size="14" font-weight="600">quest-adb-driver-arm64</text><text x="330" y="462" fill="#8b98a9" font-size="12">★ 1 · 14h ago</text>
+<text x="30" y="396" fill="#e6edf3" font-size="14" font-weight="600">jchin14</text><text x="330" y="396" fill="#8b98a9" font-size="12">★ 0 · Python · 1h ago</text>
+<text x="30" y="418" fill="#e6edf3" font-size="14" font-weight="600">klipper-backup</text><text x="330" y="418" fill="#8b98a9" font-size="12">★ 1 · 9h ago</text>
+<text x="30" y="440" fill="#e6edf3" font-size="14" font-weight="600">netBae</text><text x="330" y="440" fill="#8b98a9" font-size="12">★ 1 · Python · 15h ago</text>
+<text x="30" y="462" fill="#e6edf3" font-size="14" font-weight="600">quest-adb-driver-arm64</text><text x="330" y="462" fill="#8b98a9" font-size="12">★ 1 · 16h ago</text>
 <text x="560" y="372" fill="#8b98a9" font-size="12" letter-spacing="1">RECENT EVENTS</text>
-<text x="560" y="396" fill="#e6edf3" font-size="13">Push · jchin14</text><text x="810" y="396" fill="#8b98a9" font-size="12" text-anchor="end">13h</text>
-<text x="560" y="418" fill="#e6edf3" font-size="13">Push · netBae</text><text x="810" y="418" fill="#8b98a9" font-size="12" text-anchor="end">13h</text>
-<text x="560" y="440" fill="#e6edf3" font-size="13">Push · jchin14</text><text x="810" y="440" fill="#8b98a9" font-size="12" text-anchor="end">13h</text>
-<text x="560" y="462" fill="#e6edf3" font-size="13">Watch · Speedtest-Benchmar</text><text x="810" y="462" fill="#8b98a9" font-size="12" text-anchor="end">12h</text>
-<text x="830" y="488" fill="#4b5563" font-size="10" text-anchor="end">updated 2026-10-16 03:00 UTC</text></svg>
+<text x="560" y="396" fill="#e6edf3" font-size="13">Push · jchin14</text><text x="810" y="396" fill="#8b98a9" font-size="12" text-anchor="end">15h</text>
+<text x="560" y="418" fill="#e6edf3" font-size="13">Push · netBae</text><text x="810" y="418" fill="#8b98a9" font-size="12" text-anchor="end">15h</text>
+<text x="560" y="440" fill="#e6edf3" font-size="13">Push · jchin14</text><text x="810" y="440" fill="#8b98a9" font-size="12" text-anchor="end">15h</text>
+<text x="560" y="462" fill="#e6edf3" font-size="13">Watch · Speedtest-Benchmar</text><text x="810" y="462" fill="#8b98a9" font-size="12" text-anchor="end">14h</text>
+<text x="830" y="488" fill="#4b5563" font-size="10" text-anchor="end">updated 2026-10-16 04:46 UTC</text></svg>
