@@ -2,6 +2,7 @@
 import json, os, urllib.request
 from datetime import datetime, timedelta, timezone
 from html import escape
+from zoneinfo import ZoneInfo
 
 USER = os.environ.get("GH_USER", "jchin14")
 
@@ -88,11 +89,6 @@ if priv:
 mx = max(cnt + [1])
 
 
-def ago(s):
-    sec = (now - datetime.fromisoformat(s.replace("Z", "+00:00"))).total_seconds()
-    return f"{max(1, int(sec // 60))}m" if sec < 3600 else f"{int(sec // 3600)}h" if sec < 86400 else f"{int(sec // 86400)}d"
-
-
 THEMES = {
     "light": dict(paper="#f7f6f1", ink="#151819", line="#cbcfc8", muted="#626765", blue="#0d5bd7", green="#237351", track="#e9e8e0",
                           heat=["#cfe6d2", "#9fcfa8", "#52a07a", "#237351"], blob1="#aecbff", o1=".55", blob2="#ffd9b8", o2=".55"),
@@ -156,14 +152,13 @@ def render(fname, T):
         y = 444 + i * 20
         o.append(f'<text x="24" y="{y}" font-size="14" font-weight="500" fill="{BLUE}">{escape(r["name"])[:26]}</text>'
                  f'<text x="420" y="{y}" font-family="{MONO}" font-size="11" fill="{MUTED}" text-anchor="end">'
-                 f'★ {r["stargazers_count"]} · {escape(r["language"] + " · " if r["language"] else "")}{ago(r["pushed_at"])}</text>')
+                 f'★ {r["stargazers_count"]}{" · " + escape(r["language"]) if r["language"] else ""}</text>')
     for i, e in enumerate(events[:4]):
         y = 444 + i * 20
         o.append(f'<text x="470" y="{y}" font-size="14" font-weight="500" fill="{INK}">{escape(e["type"].replace("Event", ""))}'
-                 f'<tspan font-weight="400" fill="{MUTED}"> {escape(e["repo"]["name"].split("/")[1])[:22]}</tspan></text>'
-                 f'<text x="{W-24}" y="{y}" font-family="{MONO}" font-size="11" fill="{MUTED}" text-anchor="end">{ago(e["created_at"])}</text>')
+                 f'<tspan font-weight="400" fill="{MUTED}"> {escape(e["repo"]["name"].split("/")[1])[:22]}</tspan></text>')
     o.append('</g>')
-    o.append(f'<text x="{W-24}" y="{H-8}" font-family="{MONO}" font-size="9" fill="#9da2a0" text-anchor="end">UPDATED {now:%Y-%m-%d %H:%M} UTC</text></svg>')
+    o.append(f'<text x="{W-24}" y="{H-8}" font-family="{MONO}" font-size="9" fill="#9da2a0" text-anchor="end">UPDATED {now.astimezone(ZoneInfo("Australia/Melbourne")):%Y-%m-%d %H:%M %Z}</text></svg>')
     open(fname, "w").write("\n".join(o))
 
 

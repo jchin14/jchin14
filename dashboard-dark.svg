@@ -6,9 +6,9 @@
 <rect x="24" y="58" width="120" height="3" rx="1.5" fill="url(#g)"/>
 <text x="836" y="46" font-size="26" font-weight="700" fill="url(#g)" text-anchor="end">7.2 years<tspan fill="#8d9390" font-size="14" font-weight="400"> on GitHub</tspan></text>
 <g transform="translate(0,-34)">
-<text x="24" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">32</text><text x="24" y="180" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">REPOS</text>
+<text x="24" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">33</text><text x="24" y="180" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">REPOS</text>
 <path d="M149 134V184" stroke="#2a2f2d"/>
-<text x="159" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">23</text><text x="159" y="180" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">PRIVATE</text>
+<text x="159" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">24</text><text x="159" y="180" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">PRIVATE</text>
 <path d="M285 134V184" stroke="#2a2f2d"/>
 <text x="295" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">96</text><text x="295" y="180" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">CONTRIBUTED TO</text>
 <path d="M420 134V184" stroke="#2a2f2d"/>
@@ -16,14 +16,14 @@
 <path d="M555 134V184" stroke="#2a2f2d"/>
 <text x="565" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">9</text><text x="565" y="180" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">FOLLOWERS</text>
 <path d="M691 134V184" stroke="#2a2f2d"/>
-<text x="701" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">389</text><text x="701" y="180" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">COMMITS 1Y</text>
+<text x="701" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">397</text><text x="701" y="180" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">COMMITS 1Y</text>
 <path d="M24 204H836" stroke="#2a2f2d"/>
 <text x="24" y="230" fill="#8d9390" font-size="10" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">LANGUAGES · BY COMMITS</text>
-<text x="24" y="258" font-size="13" font-weight="500" fill="#e8eae6">TypeScript</text><rect x="130" y="251" width="230" height="6" rx="3" fill="#1d2220"/><rect x="130" y="251" width="106" height="6" rx="3" fill="url(#g)"/><text x="400" y="258" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">313</text>
-<text x="24" y="284" font-size="13" font-weight="500" fill="#e8eae6">Python</text><rect x="130" y="277" width="230" height="6" rx="3" fill="#1d2220"/><rect x="130" y="277" width="64" height="6" rx="3" fill="url(#g)"/><text x="400" y="284" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">189</text>
-<text x="24" y="310" font-size="13" font-weight="500" fill="#e8eae6">C</text><rect x="130" y="303" width="230" height="6" rx="3" fill="#1d2220"/><rect x="130" y="303" width="33" height="6" rx="3" fill="url(#g)"/><text x="400" y="310" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">96</text>
+<text x="24" y="258" font-size="13" font-weight="500" fill="#e8eae6">TypeScript</text><rect x="130" y="251" width="230" height="6" rx="3" fill="#1d2220"/><rect x="130" y="251" width="105" height="6" rx="3" fill="url(#g)"/><text x="400" y="258" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">313</text>
+<text x="24" y="284" font-size="13" font-weight="500" fill="#e8eae6">Python</text><rect x="130" y="277" width="230" height="6" rx="3" fill="#1d2220"/><rect x="130" y="277" width="65" height="6" rx="3" fill="url(#g)"/><text x="400" y="284" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">194</text>
+<text x="24" y="310" font-size="13" font-weight="500" fill="#e8eae6">C</text><rect x="130" y="303" width="230" height="6" rx="3" fill="#1d2220"/><rect x="130" y="303" width="32" height="6" rx="3" fill="url(#g)"/><text x="400" y="310" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">96</text>
 <text x="24" y="336" font-size="13" font-weight="500" fill="#e8eae6">Verilog</text><rect x="130" y="329" width="230" height="6" rx="3" fill="#1d2220"/><rect x="130" y="329" width="15" height="6" rx="3" fill="url(#g)"/><text x="400" y="336" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">44</text>
-<text x="24" y="362" font-size="13" font-weight="500" fill="#e8eae6">HTML</text><rect x="130" y="355" width="230" height="6" rx="3" fill="#1d2220"/><rect x="130" y="355" width="13" height="6" rx="3" fill="url(#g)"/><text x="400" y="362" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">37</text>
+<text x="24" y="362" font-size="13" font-weight="500" fill="#e8eae6">HTML</text><rect x="130" y="355" width="230" height="6" rx="3" fill="#1d2220"/><rect x="130" y="355" width="13" height="6" rx="3" fill="url(#g)"/><text x="400" y="362" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">39</text>
 <text x="470" y="230" fill="#8d9390" font-size="10" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">ACTIVITY · LAST 12 WEEKS</text>
 <rect x="470" y="242" width="28" height="13" fill="#1d2220"/>
 <rect x="470" y="259" width="28" height="13" fill="#1d2220"/>
@@ -65,11 +65,11 @@
 <rect x="630" y="276" width="28" height="13" fill="#0e4429"/>
 <rect x="630" y="293" width="28" height="13" fill="#0e4429"/>
 <rect x="630" y="310" width="28" height="13" fill="#006d32"/>
-<rect x="630" y="327" width="28" height="13" fill="#006d32"/>
+<rect x="630" y="327" width="28" height="13" fill="#0e4429"/>
 <rect x="630" y="344" width="28" height="13" fill="#0e4429"/>
 <rect x="662" y="242" width="28" height="13" fill="#006d32"/>
 <rect x="662" y="259" width="28" height="13" fill="#1d2220"/>
-<rect x="662" y="276" width="28" height="13" fill="#006d32"/>
+<rect x="662" y="276" width="28" height="13" fill="#0e4429"/>
 <rect x="662" y="293" width="28" height="13" fill="#006d32"/>
 <rect x="662" y="310" width="28" height="13" fill="#1d2220"/>
 <rect x="662" y="327" width="28" height="13" fill="#006d32"/>
@@ -79,19 +79,19 @@
 <rect x="694" y="276" width="28" height="13" fill="#1d2220"/>
 <rect x="694" y="293" width="28" height="13" fill="#0e4429"/>
 <rect x="694" y="310" width="28" height="13" fill="#1d2220"/>
-<rect x="694" y="327" width="28" height="13" fill="#26a641"/>
+<rect x="694" y="327" width="28" height="13" fill="#006d32"/>
 <rect x="694" y="344" width="28" height="13" fill="#0e4429"/>
 <rect x="726" y="242" width="28" height="13" fill="#0e4429"/>
-<rect x="726" y="259" width="28" height="13" fill="#006d32"/>
+<rect x="726" y="259" width="28" height="13" fill="#0e4429"/>
 <rect x="726" y="276" width="28" height="13" fill="#0e4429"/>
 <rect x="726" y="293" width="28" height="13" fill="#0e4429"/>
 <rect x="726" y="310" width="28" height="13" fill="#0e4429"/>
 <rect x="726" y="327" width="28" height="13" fill="#1d2220"/>
 <rect x="726" y="344" width="28" height="13" fill="#0e4429"/>
-<rect x="758" y="242" width="28" height="13" fill="#26a641"/>
+<rect x="758" y="242" width="28" height="13" fill="#006d32"/>
 <rect x="758" y="259" width="28" height="13" fill="#0e4429"/>
 <rect x="758" y="276" width="28" height="13" fill="#006d32"/>
-<rect x="758" y="293" width="28" height="13" fill="#006d32"/>
+<rect x="758" y="293" width="28" height="13" fill="#0e4429"/>
 <rect x="758" y="310" width="28" height="13" fill="#0e4429"/>
 <rect x="758" y="327" width="28" height="13" fill="#0e4429"/>
 <rect x="758" y="344" width="28" height="13" fill="#0e4429"/>
@@ -107,18 +107,18 @@
 <rect x="822" y="276" width="28" height="13" fill="#0e4429"/>
 <rect x="822" y="293" width="28" height="13" fill="#0e4429"/>
 <rect x="822" y="310" width="28" height="13" fill="#1d2220"/>
-<rect x="822" y="327" width="28" height="13" fill="#39d353"/>
+<rect x="822" y="327" width="28" height="13" fill="#26a641"/>
 <rect x="822" y="344" width="28" height="13" fill="#39d353"/>
 <text x="470" y="378" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">12 WEEKS AGO</text><text x="850" y="378" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" text-anchor="end">LAST WEEK</text>
 <path d="M24 396H836" stroke="#2a2f2d"/>
 <text x="24" y="420" fill="#8d9390" font-size="10" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">RECENTLY PUSHED</text><text x="470" y="420" fill="#8d9390" font-size="10" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">RECENT EVENTS</text>
-<text x="24" y="444" font-size="14" font-weight="500" fill="#6ea2ff">Speedtest-Benchmarker</text><text x="420" y="444" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">★ 2 · HTML · 20m</text>
-<text x="24" y="464" font-size="14" font-weight="500" fill="#6ea2ff">jchin14</text><text x="420" y="464" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">★ 0 · Python · 21m</text>
-<text x="24" y="484" font-size="14" font-weight="500" fill="#6ea2ff">netBae</text><text x="420" y="484" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">★ 1 · Python · 28m</text>
-<text x="24" y="504" font-size="14" font-weight="500" fill="#6ea2ff">klipper-backup</text><text x="420" y="504" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">★ 1 · 9h</text>
-<text x="470" y="444" font-size="14" font-weight="500" fill="#e8eae6">PullRequest<tspan font-weight="400" fill="#8d9390"> Speedtest-Benchmarker</tspan></text><text x="836" y="444" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">22m</text>
-<text x="470" y="464" font-size="14" font-weight="500" fill="#e8eae6">Release<tspan font-weight="400" fill="#8d9390"> netBae</tspan></text><text x="836" y="464" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">28m</text>
-<text x="470" y="484" font-size="14" font-weight="500" fill="#e8eae6">Push<tspan font-weight="400" fill="#8d9390"> jchin14</tspan></text><text x="836" y="484" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">16h</text>
-<text x="470" y="504" font-size="14" font-weight="500" fill="#e8eae6">Push<tspan font-weight="400" fill="#8d9390"> netBae</tspan></text><text x="836" y="504" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">16h</text>
+<text x="24" y="444" font-size="14" font-weight="500" fill="#6ea2ff">jchin14</text><text x="420" y="444" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">★ 0 · Python</text>
+<text x="24" y="464" font-size="14" font-weight="500" fill="#6ea2ff">Speedtest-Benchmarker</text><text x="420" y="464" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">★ 2 · HTML</text>
+<text x="24" y="484" font-size="14" font-weight="500" fill="#6ea2ff">netBae</text><text x="420" y="484" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">★ 1 · Python</text>
+<text x="24" y="504" font-size="14" font-weight="500" fill="#6ea2ff">klipper-backup</text><text x="420" y="504" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">★ 1</text>
+<text x="470" y="444" font-size="14" font-weight="500" fill="#e8eae6">PullRequest<tspan font-weight="400" fill="#8d9390"> Speedtest-Benchmarker</tspan></text>
+<text x="470" y="464" font-size="14" font-weight="500" fill="#e8eae6">Release<tspan font-weight="400" fill="#8d9390"> netBae</tspan></text>
+<text x="470" y="484" font-size="14" font-weight="500" fill="#e8eae6">Push<tspan font-weight="400" fill="#8d9390"> jchin14</tspan></text>
+<text x="470" y="504" font-size="14" font-weight="500" fill="#e8eae6">Push<tspan font-weight="400" fill="#8d9390"> netBae</tspan></text>
 </g>
-<text x="836" y="502" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" fill="#9da2a0" text-anchor="end">UPDATED 2026-10-16 05:26 UTC</text></svg>
+<text x="836" y="502" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" fill="#9da2a0" text-anchor="end">UPDATED 2026-10-16 17:13 AEDT</text></svg>
