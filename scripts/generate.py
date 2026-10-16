@@ -122,11 +122,9 @@ o = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox=
 colw = (W - 48) / 6
 for i, (k, v) in enumerate(tiles):
     x = 24 + i * colw
-    if k.startswith("Commits"):
-        o.append(f'<rect x="{x-10:.0f}" y="128" width="{colw-4:.0f}" height="60" rx="2" fill="{LIME}"/>')
-    elif i:
+    if i:
         o.append(f'<path d="M{x-10:.0f} 134V184" stroke="{LINE}"/>')
-    o.append(f'<text x="{x:.0f}" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="{INK if k.startswith("Commits") else "url(#g)"}">{v}</text>'
+    o.append(f'<text x="{x:.0f}" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">{v}</text>'
              f'<text x="{x:.0f}" y="180" {LBL.replace('font-size="10"', 'font-size="9"')}>{k.upper()}</text>')
 o.append(f'<path d="M24 204H{W-24}" stroke="{LINE}"/>')
 o.append(f'<text x="24" y="230" {LBL}>LANGUAGES · BY COMMITS</text>')
