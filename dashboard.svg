@@ -1,11 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="860" height="510" viewBox="0 0 860 510" font-family="'DM Sans','Helvetica Neue',Helvetica,Arial,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="1134" viewBox="0 0 860 1134" font-family="'DM Sans','Helvetica Neue',Helvetica,Arial,sans-serif">
 <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient><radialGradient id="b" cx=".85" cy=".05" r=".5"><stop offset="0" stop-color="#aecbff" stop-opacity=".55"/><stop offset="1" stop-color="#aecbff" stop-opacity="0"/></radialGradient><radialGradient id="p" cx=".05" cy=".98" r=".4"><stop offset="0" stop-color="#ffd9b8" stop-opacity=".55"/><stop offset="1" stop-color="#ffd9b8" stop-opacity="0"/></radialGradient></defs>
-<rect x=".5" y=".5" width="859" height="509" rx="2" fill="#f7f6f1" stroke="#cbcfc8"/>
-<rect x=".5" y=".5" width="859" height="509" rx="2" fill="url(#b)"/><rect x=".5" y=".5" width="859" height="509" rx="2" fill="url(#p)"/>
+<rect x=".5" y=".5" width="859" height="1133" rx="2" fill="#f7f6f1" stroke="#cbcfc8"/>
+<rect x=".5" y=".5" width="859" height="1133" rx="2" fill="url(#b)"/><rect x=".5" y=".5" width="859" height="1133" rx="2" fill="url(#p)"/>
 <text x="24" y="46" font-size="26" font-weight="700" fill="#151819">Jono · @jchin14</text>
 <rect x="24" y="58" width="120" height="3" rx="1.5" fill="url(#g)"/>
 <text x="836" y="46" font-size="26" font-weight="700" fill="url(#g)" text-anchor="end">7.2 years<tspan fill="#626765" font-size="14" font-weight="400"> on GitHub</tspan></text>
-<g transform="translate(0,-34)">
+<text x="24" y="96" fill="#626765" font-size="10" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">ABOUT</text><text x="490" y="96" fill="#626765" font-size="10" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">WORK WITH ME</text>
+<text x="24" y="120" font-size="14" fill="#151819">Hey, I&#x27;m Jono, a final-year engineering student in Melbourne</text>
+<text x="24" y="140" font-size="14" fill="#151819">who&#x27;s into embedded hardware, RF/comms and networks, and a</text>
+<text x="24" y="160" font-size="14" fill="#151819">little obsessed with 5G deployments, spectrum and RAN. I&#x27;ve</text>
+<text x="24" y="180" font-size="14" fill="#151819">designed 18 PCBs for Monash Nova Rover, led its 15-person</text>
+<text x="24" y="200" font-size="14" fill="#151819">electrical team and helped bring home 5 international podiums.</text>
+<text x="24" y="220" font-size="14" fill="#151819">I&#x27;ve shrunk a neonatal research sensor&#x27;s PCB by 58%, built a</text>
+<text x="24" y="240" font-size="14" fill="#151819">PoE sensor for 94% less than off-the-shelf, designed Wi-Fi for</text>
+<text x="24" y="260" font-size="14" fill="#151819">50+ clients and taught 1,800+ students. And when a gadget</text>
+<text x="24" y="280" font-size="14" fill="#151819">won&#x27;t tell me how it works, I open it up and find out.</text>
+<rect x="490" y="108" width="346" height="184" rx="4" fill="#f7f6f1" fill-opacity=".6" stroke="url(#g)"/><text x="506" y="136" font-size="15" font-weight="700" fill="#151819">Open to embedded, RF &amp; comms roles</text>
+<text x="506" y="162" font-size="13" fill="#626765">Graduating 2026 · Melbourne · open to relocation</text>
+<text x="506" y="182" font-size="13" fill="#626765">PCB design · firmware · CAN · RF</text>
+<text x="506" y="202" font-size="13" fill="#626765">5G deployments · spectrum · RAN</text>
+<text x="506" y="222" font-size="13" fill="#626765">Wi-Fi &amp; networks · UniFi · VLANs</text>
+<text x="506" y="242" font-size="13" fill="#626765">Altium Accredited PCB Design (Advanced)</text>
+<text x="506" y="278" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" fill="#0d5bd7">github@jchin.au →</text>
+<path d="M24 306H836" stroke="#cbcfc8"/><text x="24" y="332" fill="#626765" font-size="10" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">WHAT I'M BUILDING</text>
+<rect x="24" y="347" width="6" height="6" rx="1" fill="url(#g)"/><text x="38" y="356" font-size="14" font-weight="600" fill="#0d5bd7">Monash Nova Rover</text>
+<text x="38" y="376" font-size="12.5" fill="#626765">Led a 15-person team through 13 modular PCBs, a</text>
+<text x="38" y="393" font-size="12.5" fill="#626765">CAN-FD migration and a Jetson Orin integration.</text>
+<rect x="446" y="347" width="6" height="6" rx="1" fill="url(#g)"/><text x="460" y="356" font-size="14" font-weight="600" fill="#0d5bd7">Neonatal sensor probe</text>
+<text x="460" y="376" font-size="12.5" fill="#626765">Summer research upgrading an ESP32 sensor probe:</text>
+<text x="460" y="393" font-size="12.5" fill="#626765">58% smaller PCB and 2× the telemetry rate.</text>
+<rect x="24" y="411" width="6" height="6" rx="1" fill="url(#g)"/><text x="38" y="420" font-size="14" font-weight="600" fill="#0d5bd7">Making a dumb house smart</text>
+<text x="38" y="440" font-size="12.5" fill="#626765">Reverse-engineered my Brivis air con&#x27;s wall panel and</text>
+<text x="38" y="457" font-size="12.5" fill="#626765">built an ESP32 bridge into Home Assistant and HomeKit.</text>
+<rect x="446" y="411" width="6" height="6" rx="1" fill="url(#g)"/><text x="460" y="420" font-size="14" font-weight="600" fill="#0d5bd7">Reverse-engineering UniFi</text>
+<text x="460" y="440" font-size="12.5" fill="#626765">Decoding the UniFi protocol so SNMP and EasyMesh</text>
+<text x="460" y="457" font-size="12.5" fill="#626765">gear can join and be managed in my UniFi ecosystem.</text>
+<rect x="24" y="475" width="6" height="6" rx="1" fill="url(#g)"/><text x="38" y="484" font-size="14" font-weight="600" fill="#0d5bd7">binarypb.jchin.au</text>
+<text x="38" y="504" font-size="12.5" fill="#626765">Browser editor for the band combos a Pixel or Samsung</text>
+<text x="38" y="521" font-size="12.5" fill="#626765">modem advertises. Exports a Magisk module, no backend.</text>
+<rect x="446" y="475" width="6" height="6" rx="1" fill="url(#g)"/><text x="460" y="484" font-size="14" font-weight="600" fill="#0d5bd7">cellular.jchin.au</text>
+<text x="460" y="504" font-size="12.5" fill="#626765">My reference site for AU &amp; NZ mobile networks:</text>
+<text x="460" y="521" font-size="12.5" fill="#626765">spectrum holdings, RAN vendors and 5G rollouts.</text>
+<rect x="24" y="539" width="6" height="6" rx="1" fill="url(#g)"/><text x="38" y="548" font-size="14" font-weight="600" fill="#0d5bd7">JC Wireless</text>
+<text x="38" y="568" font-size="12.5" fill="#626765">Designing and deploying UniFi Wi-Fi for homes and small</text>
+<text x="38" y="585" font-size="12.5" fill="#626765">businesses around Melbourne. 2,000+ devices connected.</text>
+<rect x="446" y="539" width="6" height="6" rx="1" fill="url(#g)"/><text x="460" y="548" font-size="14" font-weight="600" fill="#0d5bd7">MetroBae</text>
+<text x="460" y="568" font-size="12.5" fill="#626765">Open the app, see the next tram from your closest stop.</text>
+<text x="460" y="585" font-size="12.5" fill="#626765">React Native + PTV API, in development.</text>
+<path d="M24 612H836" stroke="#cbcfc8"/><g transform="translate(0,490)">
 <text x="24" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">35</text><text x="24" y="180" fill="#626765" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">REPOS</text>
 <path d="M149 134V184" stroke="#cbcfc8"/>
 <text x="159" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">26</text><text x="159" y="180" fill="#626765" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">PRIVATE</text>
@@ -116,9 +158,13 @@
 <text x="24" y="464" font-size="14" font-weight="500" fill="#0d5bd7">netBae</text><text x="420" y="464" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#626765" text-anchor="end">★ 1 · Python</text>
 <text x="24" y="484" font-size="14" font-weight="500" fill="#0d5bd7">Speedtest-Benchmarker</text><text x="420" y="484" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#626765" text-anchor="end">★ 2 · HTML</text>
 <text x="24" y="504" font-size="14" font-weight="500" fill="#0d5bd7">klipper-backup</text><text x="420" y="504" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#626765" text-anchor="end">★ 1</text>
-<text x="470" y="444" font-size="14" font-weight="500" fill="#151819">Push<tspan font-weight="400" fill="#626765"> netBae</tspan></text>
+<text x="470" y="444" font-size="14" font-weight="500" fill="#151819">Push<tspan font-weight="400" fill="#626765"> jchin14</tspan></text>
 <text x="470" y="464" font-size="14" font-weight="500" fill="#151819">Push<tspan font-weight="400" fill="#626765"> netBae</tspan></text>
 <text x="470" y="484" font-size="14" font-weight="500" fill="#151819">Push<tspan font-weight="400" fill="#626765"> netBae</tspan></text>
-<text x="470" y="504" font-size="14" font-weight="500" fill="#151819">Watch<tspan font-weight="400" fill="#626765"> BetterDisplay</tspan></text>
+<text x="470" y="504" font-size="14" font-weight="500" fill="#151819">Push<tspan font-weight="400" fill="#626765"> netBae</tspan></text>
 </g>
-<text x="836" y="502" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" fill="#9da2a0" text-anchor="end">UPDATED 2026-10-25 21:39 AEDT</text></svg>
+<path d="M24 1016H836" stroke="#cbcfc8"/><text x="24" y="1042" fill="#626765" font-size="10" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">CONTRIBUTING &amp; SUPPORT</text>
+<text x="24" y="1066" font-size="13" fill="#151819">Most of what I make is open source. Found a bug or want a feature? Open an issue or send a PR, I&#x27;m happy</text>
+<text x="24" y="1084" font-size="13" fill="#151819">to help. If something here saved you time, a star means a lot, or you can buy me a coffee at</text>
+<text x="24" y="1102" font-size="13" fill="#151819">buymeacoffee.com/jchin14. And if you&#x27;re hiring for embedded, RF or comms, let&#x27;s chat!</text>
+<text x="836" y="1126" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" fill="#9da2a0" text-anchor="end">UPDATED 2026-10-25 23:00 AEDT</text></svg>
