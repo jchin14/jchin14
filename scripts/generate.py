@@ -6,6 +6,43 @@ from zoneinfo import ZoneInfo
 
 USER = os.environ.get("GH_USER", "jchin14")
 
+NAME = "Jono"
+# Profile text shown in the dashboard. SVG text does not wrap, so lines are pre-broken.
+ABOUT = ["Hey, I'm Jono, a final-year engineering student in Melbourne",
+         "who's into embedded hardware, RF/comms and networks, and a",
+         "little obsessed with 5G deployments, spectrum and RAN. I've",
+         "designed 18 PCBs for Monash Nova Rover, led its 15-person",
+         "electrical team and helped bring home 5 international podiums.",
+         "I've shrunk a neonatal research sensor's PCB by 58%, built a",
+         "PoE sensor for 94% less than off-the-shelf, designed Wi-Fi for",
+         "50+ clients and taught 1,800+ students. And when a gadget",
+         "won't tell me how it works, I open it up and find out."]
+HIRE = ("Open to embedded, RF & comms roles",
+        ["Graduating 2026 · Melbourne · open to relocation",
+         "PCB design · firmware · CAN · RF",
+         "5G deployments · spectrum · RAN",
+         "Wi-Fi & networks · UniFi · VLANs",
+         "Altium Accredited PCB Design (Advanced)"],
+        "github@jchin.au")
+PROJECTS = [("Monash Nova Rover", ["Led a 15-person team through 13 modular PCBs, a",
+                                   "CAN-FD migration and a Jetson Orin integration."]),
+            ("Neonatal sensor probe", ["Summer research upgrading an ESP32 sensor probe:",
+                                       "58% smaller PCB and 2× the telemetry rate."]),
+            ("Making a dumb house smart", ["Reverse-engineered my Brivis air con's wall panel and",
+                                           "built an ESP32 bridge into Home Assistant and HomeKit."]),
+            ("Reverse-engineering UniFi", ["Decoding the UniFi protocol so SNMP and EasyMesh",
+                                           "gear can join and be managed in my UniFi ecosystem."]),
+            ("binarypb.jchin.au", ["Browser editor for the band combos a Pixel or Samsung",
+                                   "modem advertises. Exports a Magisk module, no backend."]),
+            ("cellular.jchin.au", ["My reference site for AU & NZ mobile networks:",
+                                   "spectrum holdings, RAN vendors and 5G rollouts."]),
+            ("JC Wireless", ["Designing and deploying UniFi Wi-Fi for homes and small",
+                             "businesses around Melbourne. 2,000+ devices connected."]),
+            ("MetroBae", ["Open the app, see the next tram from your closest stop.",
+                          "React Native + PTV API, in development."])]
+SUPPORT = ["Most of what I make is open source. Found a bug or want a feature? Open an issue or send a PR, I'm happy",
+           "to help. If something here saved you time, a star means a lot, or you can buy me a coffee at",
+           "buymeacoffee.com/jchin14. And if you're hiring for embedded, RF or comms, let's chat!"]
 
 def get(path):
     req = urllib.request.Request("https://api.github.com/" + path)
@@ -112,18 +149,40 @@ def render(fname, T):
         return T["heat"][0] if r <= .25 else T["heat"][1] if r <= .5 else T["heat"][2] if r <= .75 else T["heat"][3]
 
 
-    W, H = 860, 510
+    about_end = 120 + 20 * (len(ABOUT) - 1)
+    top = about_end + 26  # divider under About
+    grid = top + 50  # first project row
+    rows_end = grid + 64 * ((len(PROJECTS) + 1) // 2)
+    off = rows_end - 122  # shift for the stats block below
+    foot = 504 + off + 22  # divider above Support
+    W, H = 860, foot + 64 + 18 * len(SUPPORT)
     LBL = f'fill="{MUTED}" font-size="10" letter-spacing="1.4" font-family="{MONO}"'
     o = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="{SANS}">',
          f'<defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient><radialGradient id="b" cx=".85" cy=".05" r=".5"><stop offset="0" stop-color="{T["blob1"]}" stop-opacity="{T["o1"]}"/><stop offset="1" stop-color="{T["blob1"]}" stop-opacity="0"/></radialGradient>'
          f'<radialGradient id="p" cx=".05" cy=".98" r=".4"><stop offset="0" stop-color="{T["blob2"]}" stop-opacity="{T["o2"]}"/><stop offset="1" stop-color="{T["blob2"]}" stop-opacity="0"/></radialGradient></defs>',
          f'<rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="2" fill="{PAPER}" stroke="{LINE}"/>',
          f'<rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="2" fill="url(#b)"/><rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="2" fill="url(#p)"/>',
-         f'<text x="24" y="46" font-size="26" font-weight="700" fill="{INK}">{escape(user.get("name") or USER)} · @{USER}</text>',
+         f'<text x="24" y="46" font-size="26" font-weight="700" fill="{INK}">{escape(NAME)} · @{USER}</text>',
          '<rect x="24" y="58" width="120" height="3" rx="1.5" fill="url(#g)"/>',
          f'<text x="{W-24}" y="46" font-size="26" font-weight="700" fill="url(#g)" text-anchor="end">{years:.1f} years'
          f'<tspan fill="{MUTED}" font-size="14" font-weight="400"> on GitHub</tspan></text>',
-         '<g transform="translate(0,-34)">']
+         f'<text x="24" y="96" {LBL}>ABOUT</text><text x="490" y="96" {LBL}>WORK WITH ME</text>']
+    for i, line in enumerate(ABOUT):
+        o.append(f'<text x="24" y="{120 + i*20}" font-size="14" fill="{INK}">{escape(line)}</text>')
+    title, lines, email = HIRE
+    o.append(f'<rect x="490" y="108" width="{W-514}" height="{about_end - 96}" rx="4" fill="{PAPER}" fill-opacity=".6" stroke="url(#g)"/>'
+             f'<text x="506" y="136" font-size="15" font-weight="700" fill="{INK}">{escape(title)}</text>')
+    for i, line in enumerate(lines):
+        o.append(f'<text x="506" y="{162 + i*20}" font-size="13" fill="{MUTED}">{escape(line)}</text>')
+    o.append(f'<text x="506" y="{about_end - 2}" font-family="{MONO}" font-size="13" fill="{BLUE}">{escape(email)} →</text>')
+    o.append(f'<path d="M24 {top}H{W-24}" stroke="{LINE}"/><text x="24" y="{top + 26}" {LBL}>WHAT I\'M BUILDING</text>')
+    for i, (name, desc) in enumerate(PROJECTS):
+        x, y = 24 + (i % 2) * 422, grid + (i // 2) * 64
+        o.append(f'<rect x="{x}" y="{y-9}" width="6" height="6" rx="1" fill="url(#g)"/>'
+                 f'<text x="{x+14}" y="{y}" font-size="14" font-weight="600" fill="{BLUE}">{escape(name)}</text>')
+        for j, line in enumerate(desc):
+            o.append(f'<text x="{x+14}" y="{y + 20 + j*17}" font-size="12.5" fill="{MUTED}">{escape(line)}</text>')
+    o.append(f'<path d="M24 {rows_end}H{W-24}" stroke="{LINE}"/><g transform="translate(0,{off})">')
     colw = (W - 48) / 6
     for i, (k, v) in enumerate(tiles):
         x = 24 + i * colw
@@ -158,6 +217,9 @@ def render(fname, T):
         o.append(f'<text x="470" y="{y}" font-size="14" font-weight="500" fill="{INK}">{escape(e["type"].replace("Event", ""))}'
                  f'<tspan font-weight="400" fill="{MUTED}"> {escape(e["repo"]["name"].split("/")[1])[:22]}</tspan></text>')
     o.append('</g>')
+    o.append(f'<path d="M24 {foot}H{W-24}" stroke="{LINE}"/><text x="24" y="{foot + 26}" {LBL}>CONTRIBUTING &amp; SUPPORT</text>')
+    for i, line in enumerate(SUPPORT):
+        o.append(f'<text x="24" y="{foot + 50 + i*18}" font-size="13" fill="{INK}">{escape(line)}</text>')
     o.append(f'<text x="{W-24}" y="{H-8}" font-family="{MONO}" font-size="9" fill="#9da2a0" text-anchor="end">UPDATED {now.astimezone(ZoneInfo("Australia/Melbourne")):%Y-%m-%d %H:%M %Z}</text></svg>')
     open(fname, "w").write("\n".join(o))
 
