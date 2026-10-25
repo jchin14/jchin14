@@ -158,13 +158,13 @@
 <text x="24" y="464" font-size="14" font-weight="500" fill="#0d5bd7">netBae</text><text x="420" y="464" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#626765" text-anchor="end">★ 1 · Python</text>
 <text x="24" y="484" font-size="14" font-weight="500" fill="#0d5bd7">Speedtest-Benchmarker</text><text x="420" y="484" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#626765" text-anchor="end">★ 2 · HTML</text>
 <text x="24" y="504" font-size="14" font-weight="500" fill="#0d5bd7">klipper-backup</text><text x="420" y="504" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#626765" text-anchor="end">★ 1</text>
-<text x="470" y="444" font-size="14" font-weight="500" fill="#151819">Push<tspan font-weight="400" fill="#626765"> jchin14</tspan></text>
-<text x="470" y="464" font-size="14" font-weight="500" fill="#151819">Push<tspan font-weight="400" fill="#626765"> netBae</tspan></text>
-<text x="470" y="484" font-size="14" font-weight="500" fill="#151819">Watch<tspan font-weight="400" fill="#626765"> BetterDisplay</tspan></text>
-<text x="470" y="504" font-size="14" font-weight="500" fill="#151819">Release<tspan font-weight="400" fill="#626765"> netBae</tspan></text>
+<text x="470" y="444" font-size="14" font-weight="500" fill="#151819">Watch<tspan font-weight="400" fill="#626765"> LED-Rails-Backend</tspan></text>
+<text x="470" y="464" font-size="14" font-weight="500" fill="#151819">Push<tspan font-weight="400" fill="#626765"> jchin14</tspan></text>
+<text x="470" y="484" font-size="14" font-weight="500" fill="#151819">Push<tspan font-weight="400" fill="#626765"> netBae</tspan></text>
+<text x="470" y="504" font-size="14" font-weight="500" fill="#151819">Watch<tspan font-weight="400" fill="#626765"> BetterDisplay</tspan></text>
 </g>
 <path d="M24 1016H836" stroke="#cbcfc8"/><text x="24" y="1042" fill="#626765" font-size="10" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">CONTRIBUTING &amp; SUPPORT</text>
 <text x="24" y="1066" font-size="13" fill="#151819">Most of what I make is open source. Found a bug or want a feature? Open an issue or send a PR, I&#x27;m happy</text>
 <text x="24" y="1084" font-size="13" fill="#151819">to help. If something here saved you time, a star means a lot, or you can buy me a coffee at</text>
 <text x="24" y="1102" font-size="13" fill="#151819">buymeacoffee.com/jchin14. And if you&#x27;re hiring for embedded, RF or comms, let&#x27;s chat!</text>
-<text x="836" y="1126" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" fill="#9da2a0" text-anchor="end">UPDATED 2026-10-25 23:34 AEDT</text></svg>
+<text x="836" y="1126" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" fill="#9da2a0" text-anchor="end">UPDATED 2026-10-26 02:30 AEDT</text></svg>
