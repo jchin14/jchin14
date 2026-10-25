@@ -113,6 +113,12 @@ else:
             langs[r["language"]] = langs.get(r["language"], 0) + 1
 langs = sorted(langs.items(), key=lambda x: -x[1])[:5]
 
+# Recent events, skipping any that repeat the one before it (same type and repo).
+recent = []
+for e in events:
+    if not recent or (e["type"], e["repo"]["name"]) != (recent[-1]["type"], recent[-1]["repo"]["name"]):
+        recent.append(e)
+
 days = 84
 cnt = [0] * days
 for e in events:
@@ -212,7 +218,7 @@ def render(fname, T):
         o.append(f'<text x="24" y="{y}" font-size="14" font-weight="500" fill="{BLUE}">{escape(r["name"])[:26]}</text>'
                  f'<text x="420" y="{y}" font-family="{MONO}" font-size="11" fill="{MUTED}" text-anchor="end">'
                  f'★ {r["stargazers_count"]}{" · " + escape(r["language"]) if r["language"] else ""}</text>')
-    for i, e in enumerate(events[:4]):
+    for i, e in enumerate(recent[:4]):
         y = 444 + i * 20
         o.append(f'<text x="470" y="{y}" font-size="14" font-weight="500" fill="{INK}">{escape(e["type"].replace("Event", ""))}'
                  f'<tspan font-weight="400" fill="{MUTED}"> {escape(e["repo"]["name"].split("/")[1])[:22]}</tspan></text>')
