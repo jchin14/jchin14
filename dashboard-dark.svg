@@ -48,9 +48,9 @@
 <text x="460" y="568" font-size="12.5" fill="#8d9390">Open the app, see the next tram from your closest stop.</text>
 <text x="460" y="585" font-size="12.5" fill="#8d9390">React Native + PTV API, in development.</text>
 <path d="M24 612H836" stroke="#2a2f2d"/><g transform="translate(0,490)">
-<text x="24" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">35</text><text x="24" y="180" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">REPOS</text>
+<text x="24" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">34</text><text x="24" y="180" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">REPOS</text>
 <path d="M149 134V184" stroke="#2a2f2d"/>
-<text x="159" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">26</text><text x="159" y="180" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">PRIVATE</text>
+<text x="159" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">29</text><text x="159" y="180" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">PRIVATE</text>
 <path d="M285 134V184" stroke="#2a2f2d"/>
 <text x="295" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">94</text><text x="295" y="180" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">CONTRIBUTED TO</text>
 <path d="M420 134V184" stroke="#2a2f2d"/>
@@ -58,10 +58,10 @@
 <path d="M555 134V184" stroke="#2a2f2d"/>
 <text x="565" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">7</text><text x="565" y="180" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">FOLLOWERS</text>
 <path d="M691 134V184" stroke="#2a2f2d"/>
-<text x="701" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">663</text><text x="701" y="180" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">COMMITS 1Y</text>
+<text x="701" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">670</text><text x="701" y="180" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">COMMITS 1Y</text>
 <path d="M24 204H836" stroke="#2a2f2d"/>
 <text x="24" y="230" fill="#8d9390" font-size="10" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">LANGUAGES · BY COMMITS</text>
-<text x="24" y="258" font-size="13" font-weight="500" fill="#e8eae6">Python</text><rect x="130" y="251" width="230" height="6" rx="3" fill="#1d2220"/><rect x="130" y="251" width="111" height="6" rx="3" fill="url(#g)"/><text x="400" y="258" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">466</text>
+<text x="24" y="258" font-size="13" font-weight="500" fill="#e8eae6">Python</text><rect x="130" y="251" width="230" height="6" rx="3" fill="#1d2220"/><rect x="130" y="251" width="111" height="6" rx="3" fill="url(#g)"/><text x="400" y="258" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">473</text>
 <text x="24" y="284" font-size="13" font-weight="500" fill="#e8eae6">TypeScript</text><rect x="130" y="277" width="230" height="6" rx="3" fill="#1d2220"/><rect x="130" y="277" width="75" height="6" rx="3" fill="url(#g)"/><text x="400" y="284" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">318</text>
 <text x="24" y="310" font-size="13" font-weight="500" fill="#e8eae6">C</text><rect x="130" y="303" width="230" height="6" rx="3" fill="#1d2220"/><rect x="130" y="303" width="23" height="6" rx="3" fill="url(#g)"/><text x="400" y="310" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">96</text>
 <text x="24" y="336" font-size="13" font-weight="500" fill="#e8eae6">HTML</text><rect x="130" y="329" width="230" height="6" rx="3" fill="#1d2220"/><rect x="130" y="329" width="11" height="6" rx="3" fill="url(#g)"/><text x="400" y="336" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">45</text>
@@ -154,10 +154,10 @@
 <text x="470" y="378" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">12 WEEKS AGO</text><text x="850" y="378" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" text-anchor="end">LAST WEEK</text>
 <path d="M24 396H836" stroke="#2a2f2d"/>
 <text x="24" y="420" fill="#8d9390" font-size="10" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">RECENTLY PUSHED</text><text x="470" y="420" fill="#8d9390" font-size="10" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">RECENT EVENTS</text>
-<text x="24" y="444" font-size="14" font-weight="500" fill="#6ea2ff">jchin14</text><text x="420" y="444" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">★ 0 · Python</text>
-<text x="24" y="464" font-size="14" font-weight="500" fill="#6ea2ff">netBae</text><text x="420" y="464" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">★ 1 · Python</text>
+<text x="24" y="444" font-size="14" font-weight="500" fill="#6ea2ff">netBae</text><text x="420" y="444" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">★ 1 · Python</text>
+<text x="24" y="464" font-size="14" font-weight="500" fill="#6ea2ff">jchin14</text><text x="420" y="464" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">★ 0 · Python</text>
 <text x="24" y="484" font-size="14" font-weight="500" fill="#6ea2ff">Speedtest-Benchmarker</text><text x="420" y="484" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">★ 2 · HTML</text>
-<text x="24" y="504" font-size="14" font-weight="500" fill="#6ea2ff">klipper-backup</text><text x="420" y="504" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">★ 1</text>
+<text x="24" y="504" font-size="14" font-weight="500" fill="#6ea2ff">quest-adb-driver-arm64</text><text x="420" y="504" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">★ 1</text>
 <text x="470" y="444" font-size="14" font-weight="500" fill="#e8eae6">Release<tspan font-weight="400" fill="#8d9390"> netBae</tspan></text>
 <text x="470" y="464" font-size="14" font-weight="500" fill="#e8eae6">Push<tspan font-weight="400" fill="#8d9390"> jchin14</tspan></text>
 <text x="470" y="484" font-size="14" font-weight="500" fill="#e8eae6">Watch<tspan font-weight="400" fill="#8d9390"> LED-Rails-Backend</tspan></text>
@@ -167,4 +167,4 @@
 <text x="24" y="1066" font-size="13" fill="#e8eae6">Most of what I make is open source. Found a bug or want a feature? Open an issue or send a PR, I&#x27;m happy</text>
 <text x="24" y="1084" font-size="13" fill="#e8eae6">to help. If something here saved you time, a star means a lot, or you can buy me a coffee at</text>
 <text x="24" y="1102" font-size="13" fill="#e8eae6">buymeacoffee.com/jchin14. And if you&#x27;re hiring for embedded, RF or comms, let&#x27;s chat!</text>
-<text x="836" y="1126" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" fill="#9da2a0" text-anchor="end">UPDATED 2026-10-30 15:15 AEDT</text></svg>
+<text x="836" y="1126" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" fill="#9da2a0" text-anchor="end">UPDATED 2026-10-30 23:05 AEDT</text></svg>
