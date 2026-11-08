@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="860" height="1198" viewBox="0 0 860 1198" font-family="'DM Sans','Helvetica Neue',Helvetica,Arial,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="1262" viewBox="0 0 860 1262" font-family="'DM Sans','Helvetica Neue',Helvetica,Arial,sans-serif">
 <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient><radialGradient id="b" cx=".85" cy=".05" r=".5"><stop offset="0" stop-color="#1d3a78" stop-opacity=".55"/><stop offset="1" stop-color="#1d3a78" stop-opacity="0"/></radialGradient><radialGradient id="p" cx=".05" cy=".98" r=".4"><stop offset="0" stop-color="#5a3a1f" stop-opacity=".4"/><stop offset="1" stop-color="#5a3a1f" stop-opacity="0"/></radialGradient></defs>
-<rect x=".5" y=".5" width="859" height="1197" rx="2" fill="#0f1211" stroke="#2a2f2d"/>
-<rect x=".5" y=".5" width="859" height="1197" rx="2" fill="url(#b)"/><rect x=".5" y=".5" width="859" height="1197" rx="2" fill="url(#p)"/>
+<rect x=".5" y=".5" width="859" height="1261" rx="2" fill="#0f1211" stroke="#2a2f2d"/>
+<rect x=".5" y=".5" width="859" height="1261" rx="2" fill="url(#b)"/><rect x=".5" y=".5" width="859" height="1261" rx="2" fill="url(#p)"/>
 <text x="24" y="46" font-size="26" font-weight="700" fill="#e8eae6">Jono · @jchin14</text>
 <rect x="24" y="58" width="120" height="3" rx="1.5" fill="url(#g)"/>
 <text x="836" y="46" font-size="26" font-weight="700" fill="url(#g)" text-anchor="end">7.3 years<tspan fill="#8d9390" font-size="14" font-weight="400"> on GitHub</tspan></text>
@@ -41,35 +41,41 @@
 <rect x="446" y="475" width="6" height="6" rx="1" fill="url(#g)"/><text x="460" y="484" font-size="14" font-weight="600" fill="#6ea2ff">doorBae + metroBae</text>
 <text x="460" y="504" font-size="12.5" fill="#8d9390">Cloudflare Workers edge API fusing GTFS and GTFS-RT</text>
 <text x="460" y="521" font-size="12.5" fill="#8d9390">feeds into a kiosk board and a React Native iOS app.</text>
-<rect x="24" y="539" width="6" height="6" rx="1" fill="url(#g)"/><text x="38" y="548" font-size="14" font-weight="600" fill="#6ea2ff">unifi-ddns6</text>
-<text x="38" y="568" font-size="12.5" fill="#8d9390">IPv6 dynamic DNS UniFi lacks: tracks WAN prefix changes</text>
-<text x="38" y="585" font-size="12.5" fill="#8d9390">and syncs AAAA/A records to Cloudflare, HE or DynDNS.</text>
-<rect x="446" y="539" width="6" height="6" rx="1" fill="url(#g)"/><text x="460" y="548" font-size="14" font-weight="600" fill="#6ea2ff">Making a dumb house smart</text>
-<text x="460" y="568" font-size="12.5" fill="#8d9390">Reverse-engineered my Brivis air con&#x27;s wall panel and</text>
-<text x="460" y="585" font-size="12.5" fill="#8d9390">built an ESP32 bridge into Home Assistant and HomeKit.</text>
-<rect x="24" y="603" width="6" height="6" rx="1" fill="url(#g)"/><text x="38" y="612" font-size="14" font-weight="600" fill="#6ea2ff">cellular.jchin.au</text>
-<text x="38" y="632" font-size="12.5" fill="#8d9390">My reference site for AU &amp; NZ mobile networks:</text>
-<text x="38" y="649" font-size="12.5" fill="#8d9390">spectrum holdings, RAN vendors and 5G rollouts.</text>
-<rect x="446" y="603" width="6" height="6" rx="1" fill="url(#g)"/><text x="460" y="612" font-size="14" font-weight="600" fill="#6ea2ff">JC Wireless</text>
-<text x="460" y="632" font-size="12.5" fill="#8d9390">Designing and deploying UniFi Wi-Fi for homes and small</text>
-<text x="460" y="649" font-size="12.5" fill="#8d9390">businesses around Melbourne. 2,000+ devices connected.</text>
-<path d="M24 676H836" stroke="#2a2f2d"/><g transform="translate(0,554)">
+<rect x="24" y="539" width="6" height="6" rx="1" fill="url(#g)"/><text x="38" y="548" font-size="14" font-weight="600" fill="#6ea2ff">messageBae</text>
+<text x="38" y="568" font-size="12.5" fill="#8d9390">Electron macOS Messenger client: keyboard-first, menu</text>
+<text x="38" y="585" font-size="12.5" fill="#8d9390">bar badge and mute, native menus over Meta&#x27;s dialogs.</text>
+<rect x="446" y="539" width="6" height="6" rx="1" fill="url(#g)"/><text x="460" y="548" font-size="14" font-weight="600" fill="#6ea2ff">unifi-ddns6</text>
+<text x="460" y="568" font-size="12.5" fill="#8d9390">IPv6 dynamic DNS UniFi lacks: tracks WAN prefix changes</text>
+<text x="460" y="585" font-size="12.5" fill="#8d9390">and syncs AAAA/A records to Cloudflare, HE or DynDNS.</text>
+<rect x="24" y="603" width="6" height="6" rx="1" fill="url(#g)"/><text x="38" y="612" font-size="14" font-weight="600" fill="#6ea2ff">Making a dumb house smart</text>
+<text x="38" y="632" font-size="12.5" fill="#8d9390">Reverse-engineered my Brivis air con&#x27;s wall panel and</text>
+<text x="38" y="649" font-size="12.5" fill="#8d9390">built an ESP32 bridge into Home Assistant and HomeKit.</text>
+<rect x="446" y="603" width="6" height="6" rx="1" fill="url(#g)"/><text x="460" y="612" font-size="14" font-weight="600" fill="#6ea2ff">Open-source contributions</text>
+<text x="460" y="632" font-size="12.5" fill="#8d9390">unpoller: fixed Prometheus DPI dashboards dropping data</text>
+<text x="460" y="649" font-size="12.5" fill="#8d9390">on quoted client names. Nova Rover: CAN bus speed-up.</text>
+<rect x="24" y="667" width="6" height="6" rx="1" fill="url(#g)"/><text x="38" y="676" font-size="14" font-weight="600" fill="#6ea2ff">cellular.jchin.au</text>
+<text x="38" y="696" font-size="12.5" fill="#8d9390">My reference site for AU &amp; NZ mobile networks:</text>
+<text x="38" y="713" font-size="12.5" fill="#8d9390">spectrum holdings, RAN vendors and 5G rollouts.</text>
+<rect x="446" y="667" width="6" height="6" rx="1" fill="url(#g)"/><text x="460" y="676" font-size="14" font-weight="600" fill="#6ea2ff">JC Wireless</text>
+<text x="460" y="696" font-size="12.5" fill="#8d9390">Designing and deploying UniFi Wi-Fi for homes and small</text>
+<text x="460" y="713" font-size="12.5" fill="#8d9390">businesses around Melbourne. 2,000+ devices connected.</text>
+<path d="M24 740H836" stroke="#2a2f2d"/><g transform="translate(0,618)">
 <text x="24" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">47</text><text x="24" y="180" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">REPOS</text>
 <path d="M149 134V184" stroke="#2a2f2d"/>
 <text x="159" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">36</text><text x="159" y="180" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">PRIVATE</text>
 <path d="M285 134V184" stroke="#2a2f2d"/>
-<text x="295" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">97</text><text x="295" y="180" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">CONTRIBUTED TO</text>
+<text x="295" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">98</text><text x="295" y="180" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">CONTRIBUTED TO</text>
 <path d="M420 134V184" stroke="#2a2f2d"/>
-<text x="430" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">77</text><text x="430" y="180" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">STARS</text>
+<text x="430" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">123</text><text x="430" y="180" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">STARS</text>
 <path d="M555 134V184" stroke="#2a2f2d"/>
 <text x="565" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">7</text><text x="565" y="180" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">FOLLOWERS</text>
 <path d="M691 134V184" stroke="#2a2f2d"/>
-<text x="701" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">1896</text><text x="701" y="180" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">COMMITS 1Y</text>
+<text x="701" y="165" font-size="30" font-weight="700" letter-spacing="-1" fill="url(#g)">1908</text><text x="701" y="180" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">COMMITS 1Y</text>
 <path d="M24 204H836" stroke="#2a2f2d"/>
 <text x="24" y="230" fill="#8d9390" font-size="10" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">LANGUAGES · BY COMMITS</text>
-<text x="24" y="258" font-size="13" font-weight="500" fill="#e8eae6">Python</text><rect x="130" y="251" width="230" height="6" rx="3" fill="#1d2220"/><rect x="130" y="251" width="86" height="6" rx="3" fill="url(#g)"/><text x="400" y="258" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">829</text>
+<text x="24" y="258" font-size="13" font-weight="500" fill="#e8eae6">Python</text><rect x="130" y="251" width="230" height="6" rx="3" fill="#1d2220"/><rect x="130" y="251" width="87" height="6" rx="3" fill="url(#g)"/><text x="400" y="258" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">839</text>
 <text x="24" y="284" font-size="13" font-weight="500" fill="#e8eae6">JavaScript</text><rect x="130" y="277" width="230" height="6" rx="3" fill="#1d2220"/><rect x="130" y="277" width="64" height="6" rx="3" fill="url(#g)"/><text x="400" y="284" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">617</text>
-<text x="24" y="310" font-size="13" font-weight="500" fill="#e8eae6">TypeScript</text><rect x="130" y="303" width="230" height="6" rx="3" fill="#1d2220"/><rect x="130" y="303" width="51" height="6" rx="3" fill="url(#g)"/><text x="400" y="310" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">487</text>
+<text x="24" y="310" font-size="13" font-weight="500" fill="#e8eae6">TypeScript</text><rect x="130" y="303" width="230" height="6" rx="3" fill="#1d2220"/><rect x="130" y="303" width="51" height="6" rx="3" fill="url(#g)"/><text x="400" y="310" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">489</text>
 <text x="24" y="336" font-size="13" font-weight="500" fill="#e8eae6">HTML</text><rect x="130" y="329" width="230" height="6" rx="3" fill="#1d2220"/><rect x="130" y="329" width="19" height="6" rx="3" fill="url(#g)"/><text x="400" y="336" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">180</text>
 <text x="24" y="362" font-size="13" font-weight="500" fill="#e8eae6">C</text><rect x="130" y="355" width="230" height="6" rx="3" fill="#1d2220"/><rect x="130" y="355" width="11" height="6" rx="3" fill="url(#g)"/><text x="400" y="362" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">102</text>
 <text x="470" y="230" fill="#8d9390" font-size="10" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">ACTIVITY · LAST 12 WEEKS</text>
@@ -160,17 +166,17 @@
 <text x="470" y="378" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">12 WEEKS AGO</text><text x="850" y="378" fill="#8d9390" font-size="9" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" text-anchor="end">LAST WEEK</text>
 <path d="M24 396H836" stroke="#2a2f2d"/>
 <text x="24" y="420" fill="#8d9390" font-size="10" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">RECENTLY PUSHED</text><text x="470" y="420" fill="#8d9390" font-size="10" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">RECENT EVENTS</text>
-<text x="24" y="444" font-size="14" font-weight="500" fill="#6ea2ff">unifi-device-bridge</text><text x="420" y="444" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">★ 0 · Python</text>
+<text x="24" y="444" font-size="14" font-weight="500" fill="#6ea2ff">netBae</text><text x="420" y="444" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">★ 3 · Python</text>
 <text x="24" y="464" font-size="14" font-weight="500" fill="#6ea2ff">jchin14</text><text x="420" y="464" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">★ 0 · Python</text>
-<text x="24" y="484" font-size="14" font-weight="500" fill="#6ea2ff">quest-adb-driver-arm64</text><text x="420" y="484" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">★ 1</text>
-<text x="24" y="504" font-size="14" font-weight="500" fill="#6ea2ff">dns-stack</text><text x="420" y="504" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">★ 0 · Python</text>
-<text x="470" y="444" font-size="14" font-weight="500" fill="#e8eae6">Push<tspan font-weight="400" fill="#8d9390"> dns-stack</tspan></text>
-<text x="470" y="464" font-size="14" font-weight="500" fill="#e8eae6">Push<tspan font-weight="400" fill="#8d9390"> jchin14</tspan></text>
-<text x="470" y="484" font-size="14" font-weight="500" fill="#e8eae6">Push<tspan font-weight="400" fill="#8d9390"> Speedtest-Benchmarker</tspan></text>
-<text x="470" y="504" font-size="14" font-weight="500" fill="#e8eae6">Create<tspan font-weight="400" fill="#8d9390"> unpoller-dashboards</tspan></text>
+<text x="24" y="484" font-size="14" font-weight="500" fill="#6ea2ff">unifi-device-bridge</text><text x="420" y="484" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">★ 0 · Python</text>
+<text x="24" y="504" font-size="14" font-weight="500" fill="#6ea2ff">quest-adb-driver-arm64</text><text x="420" y="504" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#8d9390" text-anchor="end">★ 1</text>
+<text x="470" y="444" font-size="14" font-weight="500" fill="#e8eae6">Release<tspan font-weight="400" fill="#8d9390"> netBae</tspan></text>
+<text x="470" y="464" font-size="14" font-weight="500" fill="#e8eae6">Push<tspan font-weight="400" fill="#8d9390"> dns-stack</tspan></text>
+<text x="470" y="484" font-size="14" font-weight="500" fill="#e8eae6">Push<tspan font-weight="400" fill="#8d9390"> jchin14</tspan></text>
+<text x="470" y="504" font-size="14" font-weight="500" fill="#e8eae6">Push<tspan font-weight="400" fill="#8d9390"> Speedtest-Benchmarker</tspan></text>
 </g>
-<path d="M24 1080H836" stroke="#2a2f2d"/><text x="24" y="1106" fill="#8d9390" font-size="10" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">CONTRIBUTING &amp; SUPPORT</text>
-<text x="24" y="1130" font-size="13" fill="#e8eae6">Most of what I make is open source. Found a bug or want a feature? Open an issue or send a PR, I&#x27;m happy</text>
-<text x="24" y="1148" font-size="13" fill="#e8eae6">to help. If something here saved you time, a star means a lot, or you can buy me a coffee at</text>
-<text x="24" y="1166" font-size="13" fill="#e8eae6">buymeacoffee.com/jchin14. And if you&#x27;re hiring for embedded, RF or comms, let&#x27;s chat!</text>
-<text x="836" y="1190" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" fill="#9da2a0" text-anchor="end">UPDATED 2026-11-08 20:46 AEDT</text></svg>
+<path d="M24 1144H836" stroke="#2a2f2d"/><text x="24" y="1170" fill="#8d9390" font-size="10" letter-spacing="1.4" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">CONTRIBUTING &amp; SUPPORT</text>
+<text x="24" y="1194" font-size="13" fill="#e8eae6">Most of what I make is open source. Found a bug or want a feature? Open an issue or send a PR, I&#x27;m happy</text>
+<text x="24" y="1212" font-size="13" fill="#e8eae6">to help. If something here saved you time, a star means a lot, or you can buy me a coffee at</text>
+<text x="24" y="1230" font-size="13" fill="#e8eae6">buymeacoffee.com/jchin14. And if you&#x27;re hiring for embedded, RF or comms, let&#x27;s chat!</text>
+<text x="836" y="1254" font-family="'DM Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" fill="#9da2a0" text-anchor="end">UPDATED 2026-11-08 20:59 AEDT</text></svg>
