@@ -95,6 +95,10 @@ tiles = [("Repos", user["public_repos"]), ("Stars", stars), ("Followers", user["
 langs = {}
 if priv:
     allr = priv["repositories"]["nodes"] + [r for o in priv["organizations"]["nodes"] for r in o["repositories"]["nodes"]]
+    # Repos you've had PRs merged into, even without collaborator or org access (e.g. upstream projects).
+    prs = gql('{search(query:"author:%s is:pr is:merged",type:ISSUE,first:100){nodes{... on PullRequest{repository{%s}}}}}'
+              % (USER, REPO[6:-1]))["search"]["nodes"]
+    allr += [n["repository"] for n in prs if n.get("repository")]
     nodes = list({n["nameWithOwner"]: n for n in allr}.values())
     mine = [n for n in nodes if n["owner"]["login"].lower() == USER.lower()]
     cc = priv["contributionsCollection"]
