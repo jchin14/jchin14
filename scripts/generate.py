@@ -88,24 +88,27 @@ if tok:
 stars = sum(r["stargazers_count"] for r in repos)
 forks = sum(r["fork"] for r in repos)
 years = (now - datetime.fromisoformat(user["created_at"].replace("Z", "+00:00"))).days / 365.25
+merged = get(f"search/issues?q=author:{USER}+is:pr+is:merged&per_page=1")["total_count"]
 tiles = [("Repos", user["public_repos"]), ("Stars", stars), ("Followers", user["followers"]),
-         ("Following", user["following"]), ("Forks", forks), ("Public", user["public_repos"])]
+         ("Following", user["following"]), ("Forks", forks), ("PRs merged", merged)]
 
 # Languages: commits you authored, grouped by each repo's primary language.
 langs = {}
 if priv:
     allr = priv["repositories"]["nodes"] + [r for o in priv["organizations"]["nodes"] for r in o["repositories"]["nodes"]]
     # Repos you've had PRs merged into, even without collaborator or org access (e.g. upstream projects).
-    prs = gql('{search(query:"author:%s is:pr is:merged",type:ISSUE,first:100){nodes{... on PullRequest{repository{%s}}}}}'
-              % (USER, REPO[6:-1]))["search"]["nodes"]
-    allr += [n["repository"] for n in prs if n.get("repository")]
+    prs = gql('{search(query:"author:%s is:pr is:merged",type:ISSUE,first:100){issueCount nodes{... on PullRequest{repository{%s}}}}}'
+              % (USER, REPO[6:-1]))["search"]
+    merged = prs["issueCount"]
+    allr += [n["repository"] for n in prs["nodes"] if n.get("repository")]
     nodes = list({n["nameWithOwner"]: n for n in allr}.values())
     mine = [n for n in nodes if n["owner"]["login"].lower() == USER.lower()]
     cc = priv["contributionsCollection"]
     tiles = [("Repos", len(mine)), ("Private", sum(n["isPrivate"] for n in mine)),
              ("Contributed to", len(nodes) - len(mine)), ("Stars", sum(n["stargazerCount"] for n in nodes)),
              ("Followers", priv["followers"]["totalCount"]),
-             ("Commits 1y", cc["totalCommitContributions"] + cc["restrictedContributionsCount"])]
+             ("Commits 1y", cc["totalCommitContributions"] + cc["restrictedContributionsCount"]),
+             ("PRs merged", merged)]
     # Commits you authored per repo (default branch), in small batches to keep queries light.
     withlang = [n for n in nodes if n["primaryLanguage"]]
     for i in range(0, len(withlang), 15):
@@ -201,7 +204,7 @@ def render(fname, T):
         for j, line in enumerate(desc):
             o.append(f'<text x="{x+14}" y="{y + 20 + j*17}" font-size="12.5" fill="{MUTED}">{escape(line)}</text>')
     o.append(f'<path d="M24 {rows_end}H{W-24}" stroke="{LINE}"/><g transform="translate(0,{off})">')
-    colw = (W - 48) / 6
+    colw = (W - 48) / len(tiles)
     for i, (k, v) in enumerate(tiles):
         x = 24 + i * colw
         if i:
