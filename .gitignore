@@ -1,0 +1,11 @@
+CHANGES.md
+CLAUDE.md
+CLAUDE.local.md
+AGENTS.md
+GEMINI.md
+.claude/
+.cursor*
+.codex/
+.serena/
+.aider*
+.github/copilot-instructions.md
