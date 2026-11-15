@@ -89,8 +89,8 @@ stars = sum(r["stargazers_count"] for r in repos)
 forks = sum(r["fork"] for r in repos)
 years = (now - datetime.fromisoformat(user["created_at"].replace("Z", "+00:00"))).days / 365.25
 merged = get(f"search/issues?q=author:{USER}+is:pr+is:merged&per_page=1")["total_count"]
-tiles = [("Repos", user["public_repos"]), ("Stars", stars), ("Followers", user["followers"]),
-         ("Following", user["following"]), ("Forks", forks), ("PRs merged", merged)]
+tiles = [("Repos", user["public_repos"]), ("Forks", forks), ("PRs merged", merged),
+         ("Stars", stars), ("Followers", user["followers"]), ("Following", user["following"])]
 
 # Languages: commits you authored, grouped by each repo's primary language.
 langs = {}
@@ -104,11 +104,11 @@ if priv:
     nodes = list({n["nameWithOwner"]: n for n in allr}.values())
     mine = [n for n in nodes if n["owner"]["login"].lower() == USER.lower()]
     cc = priv["contributionsCollection"]
+    # Order: your repos, your activity, outside contributions, then audience.
     tiles = [("Repos", len(mine)), ("Private", sum(n["isPrivate"] for n in mine)),
-             ("Contributed to", len(nodes) - len(mine)), ("Stars", sum(n["stargazerCount"] for n in nodes)),
-             ("Followers", priv["followers"]["totalCount"]),
              ("Commits 1y", cc["totalCommitContributions"] + cc["restrictedContributionsCount"]),
-             ("PRs merged", merged)]
+             ("PRs merged", merged), ("Contributed to", len(nodes) - len(mine)),
+             ("Stars", sum(n["stargazerCount"] for n in nodes)), ("Followers", priv["followers"]["totalCount"])]
     # Commits you authored per repo (default branch), in small batches to keep queries light.
     withlang = [n for n in nodes if n["primaryLanguage"]]
     for i in range(0, len(withlang), 15):
